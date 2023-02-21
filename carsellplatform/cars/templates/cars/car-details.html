@@ -11,10 +11,9 @@
         <div class="breadcrumb-areas">
             <h1>{{ car.car_title }}</h1>
             <ul class="breadcrumbs">
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li class="active"></li>
-                <li><a href="{% url 'cars' %}">Cars</a></li>
-                <li class="active">{{ car.car_title }}</li>
+                <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'cars' %}">Cars</a></li>
+                <li class="breadcrumb-item active">{{ car.car_title }}</li>
             </ul>
         </div>
     </div>

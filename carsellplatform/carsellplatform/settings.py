@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'active_link',
     'website.apps.WebsiteConfig',
     'cars.apps.CarsConfig',
+    'uaccounts.apps.UaccountsConfig',
 ]
 
 MIDDLEWARE = [

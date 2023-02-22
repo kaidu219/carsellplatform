@@ -33,8 +33,9 @@ def contact(request):
    return render(request, 'website/contact.html', context)
 
 def about(request):
-
+   teams = Team.objects.all()
    context = {
+      'teams': teams,
       'title': 'About Us'
    }
    return render(request, 'website/about.html', context)

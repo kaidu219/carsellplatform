@@ -13,7 +13,7 @@ def login(request):
         if user:
             auth.login(request, user)
             messages.success(request, 'You are now loggen in!')
-            return redirect('cars')
+            return redirect('dashboard')
         else:
             return redirect('login')
     return render(request, 'uaccounts/login.html')
@@ -49,8 +49,14 @@ def register(request):
                     user.save()
                     auth.login(request, user)
                     messages.success(request, 'You are now loggen in!')
-                    return redirect('cars')
+                    return redirect('dashboard')
         else:
             return redirect('register')
     else:
         return render(request, 'uaccounts/register.html')
+
+
+def dashboard(request):
+    user_id = request.user.id
+
+    return render(request, 'uaccounts/dashboard.html')

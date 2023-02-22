@@ -24,6 +24,10 @@
 <!-- Featured car start -->
 <div class="featured-car content-area">
     <div class="container">
+        {% include 'includes/messages.html' %}
+        <div class="main-title" style="text-align:left !import;">
+            <h1>Welcome, <span>{{ user.first_name }}!</span> </h1>
+        </div>
         <div class="row">
             <div class="col-lg-8 col-md-12">
                 

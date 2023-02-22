@@ -1,4 +1,4 @@
-{% extends 'base.html'%}
+{% extends 'base.html' %}
 {% load static %}
 
 {% block title %} Car Zone - Login {% endblock %}
@@ -30,7 +30,8 @@
                         </a>
                     </div>
                     <h3>Sign into your account</h3>
-                    <form action="{%'login'%}" method="POST">
+                    {% include 'includes/messages.html' %}
+                    <form action="{% url 'login' %}" method="POST">
                         {% csrf_token %}
                         <div class="form-group form-box">
                             <input type="text" name="username" class="input-text" placeholder="Enter your username" required>

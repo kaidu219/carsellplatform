@@ -1,6 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Team
 from cars.models import Car 
+from django.contrib.auth.models import User
+from django.utils.safestring import mark_safe
+from django.core.mail import send_mail
+from django.contrib import messages
+
 
 
 # Create your views here.
@@ -27,6 +32,30 @@ def index(request):
 
 
 def contact(request):
+   if request.method == 'POST':
+      name = request.POST['name']
+      email = request.POST = ['email']
+      subject = request.POST = ['subject']
+      phone = request.POST = ['phone'] 
+      message = request.POST = ['message']
+
+      message_mail = f'Your have massage in CarSelling Platform from {name} regarding: {message} \n\n\Sender Details: Phone: {phone}; Email: {email}'
+
+      admin_info = User.objects.get(is_superuser=True)
+      admin_email = admin_info.email
+
+
+      send_mail(
+         subject,
+         mark_safe(message_mail),
+         email,
+         ['kaidu219@gmail.com', admin_email],
+         fail_silently=False,
+
+      )
+      messages.success(request, 'Your message has been successfully send!')
+
+      return redirect('contact')
    context = {
       'title': 'Contact Us'
    }

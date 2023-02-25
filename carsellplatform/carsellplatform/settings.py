@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'website.apps.WebsiteConfig',
     'cars.apps.CarsConfig',
     'uaccounts.apps.UaccountsConfig',
+    'contacts.apps.ContactsConfig',
 
     #allaccounts
     'allauth',
@@ -124,7 +125,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'ru'
 
-TIME_ZONE = 'Asia/Bishkek'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
@@ -151,6 +152,18 @@ LOGIN_REDIRECT_URL = 'dashboard'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#rnjfgbcgrmawfsne
+# email settings
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '465'
+EMAIL_HOST_USER = 'kaidu219@gmail.com'
+EMAIL_HOST_PASSWORD = 'rnjfgbcgrmawfsne'
+EMAIL_USE_TSL = False
+EMAIL_USE_SSL = True
+
+
+
 
 CKEDITOR_CONFIGS = {
     'default': {

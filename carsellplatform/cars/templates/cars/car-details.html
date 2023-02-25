@@ -1,10 +1,8 @@
-
 {% extends 'base.html' %}
 {% load static %}
+{% block title %}{{ car.car_title }}{% endblock %}
 {% load humanize %}
-{% block title %} {{ title }} {% endblock %}
 {% block content %}
-
 <!-- Sub banner start -->
 <div class="sub-banner overview-bgi">
     <div class="container breadcrumb-area">
@@ -28,16 +26,18 @@
                 <div class="car-details-section">
                     <!-- Heading start -->
                     <div class="heading-car clearfix">
+                        {% include 'includes/messages.html' %}
                         <div class="pull-left">
                             <h3>{{ car.car_title }}</h3>
                             <h6>
-                                <i class="flaticon-pin"></i>{{ car.state }}, {{ car.city }}
+                                <i class="flaticon-pin"></i>{{ car.city }}, {{ car.state }}
                             </h6>
                         </div>
                         <div class="pull-right">
-                            <h3><span>{{ car.price| intcomma }}$</span></h3>
+                            <h3><span>${{ car.price |intcomma }}</span></h3>
                         </div>
                     </div>
+
                     <div id="carDetailsSlider" class="carousel car-details-sliders slide mb-40">
                         <!-- main slider carousel items -->
                         <div class="carousel-inner">
@@ -92,9 +92,9 @@
                                     <h3 class="heading-2">
                                         Description
                                     </h3>
-                                    {% autoescape off %} 
-                                    <p> {{ car.description }}  </p>
-                                    {% endautoescape %} 
+                                  {% autoescape off %}
+                                     <p>{{ car.description|default:"Please search information regarding this auto in Wikipedia" }}</p>
+                                  {% endautoescape %}
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="two" role="tabpanel" aria-labelledby="two-tab">
@@ -103,15 +103,13 @@
                                     <div class="row">
                                         {% for feature in car.features %}
                                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                            <ul>  
+                                            <ul>
                                                 <li>
                                                     {{ feature }}
                                                 </li>
-                                                
                                             </ul>
                                         </div>
-                                        {% endfor %%}
-                                        
+                                        {% endfor %}
                                     </div>
                                 </div>
                             </div>
@@ -127,8 +125,6 @@
                     <!-- Advanced search start -->
                     <div class="widget advanced-search d-none-992">
                         <button class="btn btn-outline-danger bomd btn-block btn-lg" data-toggle="modal" data-target="#inquiryModal">Send message</button>
-
-
                         <br>
                         <h3 class="sidebar-title">Short Description</h3>
                         <ul>
@@ -139,45 +135,44 @@
                                 <span>Body Style:</span>{{ car.body_style }}
                             </li>
                             <li>
-                                <span>Engine:</span>{{ car.engine }} 
+                                <span>Engine:</span>{{ car.engine }}
                             </li>
                             <li>
-                                <span>Transmission:</span>{{ car.transmission }} 
+                                <span>Transmission:</span>{{ car.transmission }}
                             </li>
                             <li>
-                                <span>Color:</span>{{ car.color }} 
+                                <span>Color:</span>{{ car.color }}
                             </li>
                             <li>
-                                <span>Fuel Type:</span>{{ car.fuel_type }} 
+                                <span>Fuel Type:</span>{{ car.fuel_type }}
                             </li>
                             <li>
-                                <span>Interior:</span>{{ car.interior }} 
+                                <span>Interior:</span> {{ car.interior }}
                             </li>
                             <li>
-                                <span>Kilometers:</span>{{ car.kilometers }} 
+                                <span>Kilometers:</span> {{ car.kilometers }}
                             </li>
                             <li>
-                                <span>Doors:</span>{{ car.doors }} 
+                                <span>Doors:</span> {{ car.doors }}
                             </li>
                             <li>
-                                <span>Passengers:</span>{{ car.passengers }} 
+                                <span>Passengers:</span> {{ car.passengers }}
                             </li>
                             <li>
-                                <span>Vin #:</span>{{ car.vin_no }} 
+                                <span>Vin #:</span> {{ car.vin_no }}
                             </li>
                             <li>
-                                <span>Fuel Mileage:</span>{{ car.fuel_mileage}}  per 100 km
+                                <span>Fuel Mileage:</span> {{ car.fuel_mileage }} per 100 km
                             </li>
-                            
-
+                         
                             <li>
                                 <span>Condition:</span>{{ car.condition }}
                             </li>
                             <li>
-                                <span>Owners:</span>N/{{ car.no_of_owners }} 
+                                <span>Owners:</span>{{ car.no_of_owners }}
                             </li>
                             <li>
-                                <span>City:</span> {{ car.city }} 
+                                <span>City:</span>{{ car.city }}
                             </li>
                         </ul>
                     </div>
@@ -194,17 +189,35 @@
                             </button>
                           </div>
                           <div class="modal-body">
-                            <form action="#">
+                           
+                            <form action="{% url 'inquiry' %}" method="post">
+                                {% csrf_token %}
+                                <input type="hidden" name="car_id" value="{{ car.id }}">
                                 <div class="form-group">
-                                  <label for="name" class="col-form-label">Hello, My Name is</label>
-                                  <div class="row">
-                                    <div class="col">
-                                      <input type="text" name="first_name" class="form-control" placeholder="First Name" required>
-                                    </div>
-                                    <div class="col">
-                                      <input type="text" name="last_name" class="form-control" placeholder="Last Name" required>
-                                    </div>
-                                  </div>
+                                    {% if user.is_authenticated %}
+                                        <label for="name" class="col-form-label">Hello, My Name is {{user.first_name}}</label>
+                                        <input type="hidden" name="user_id" value="{{ request.user.pk }}">
+                                        <div class="row">
+                                            <div class="col">
+                                              <input type="text" name="first_name" class="form-control" placeholder="{{user.first_name}}" value = "{{user.first_name}}">
+                                            </div>
+                                            <div class="col">
+                                              <input type="text" name="last_name" class="form-control" placeholder="{{user.last_name}}" value = "{{user.last_name}}">
+                                            </div>
+                                          </div>
+                                    
+                                    {% else %}
+                                        <label for="name" class="col-form-label">Hello!</label>
+                                        <input type="hidden" name="user_id" value="{{ 0 }}">
+                                        <div class="row">
+                                            <div class="col">
+                                            <input type="text" name="first_name" class="form-control" placeholder="First Name" required>
+                                            </div>
+                                            <div class="col">
+                                            <input type="text" name="last_name" class="form-control" placeholder="Last Name" required>
+                                            </div>
+                                        </div>
+                                    {% endif %}
                                 </div>
                                   <div class="form-group">
                                       <select class="form-control" id="sel1" name="customer_need">
@@ -235,8 +248,13 @@
                                   <div class="row">
                                     <div class="col">
                                         <label for="name" class="col-form-label">You can reach me by email at</label>
-                                      <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                                        {% if user.is_authenticated %}
+                                        <input type="email" name="email" class="form-control" placeholder="{{ user.email }}" value = "{{ user.email }}">
+                                        {% else %}
+                                        <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                                        {% endif %}
                                     </div>
+
                                     <div class="col">
                                         <label for="phone" class="col-form-label">or by phone at</label>
                                       <input type="text" name="phone" placeholder="Phone Number (optional)" class="form-control">
@@ -263,10 +281,10 @@
                                 <i class="flaticon-pin"></i>20/F Green Road, Dhanmondi
                             </li>
                             <li>
-                                <i class="flaticon-mail"></i><a href="mailto:info@themevessel.com">info@themevessel.com</a>
+                                <i class="flaticon-mail"></i><a href="mailto:info@carsbish.kg">info@carsbish.kg</a>
                             </li>
                             <li>
-                                <i class="flaticon-phone"></i><a href="tel:+0477-85x6-552">+0477 85x6 552</a>
+                                <i class="flaticon-phone"></i><a href="tel:+996555123456">+0477 85x6 552</a>
                             </li>
                         </ul>
                         <div class="social-list clearfix">
@@ -287,68 +305,5 @@
 </div>
 <!-- Properties details page end -->
 
-{% block jsblock %} 
-<script>
-    function LoadMap(propertes) {
-        var defaultLat = 40.7110411;
-        var defaultLng = -74.0110326;
-        var mapOptions = {
-            center: new google.maps.LatLng(defaultLat, defaultLng),
-            zoom: 15,
-            scrollwheel: false,
-            styles: [
-                {
-                    featureType: "administrative",
-                    elementType: "labels",
-                    stylers: [
-                        {visibility: "off"}
-                    ]
-                },
-                {
-                    featureType: "water",
-                    elementType: "labels",
-                    stylers: [
-                        {visibility: "off"}
-                    ]
-                },
-                {
-                    featureType: 'poi.business',
-                    stylers: [{visibility: 'off'}]
-                },
-                {
-                    featureType: 'transit',
-                    elementType: 'labels.icon',
-                    stylers: [{visibility: 'off'}]
-                },
-            ]
-        };
-        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-        var infoWindow = new google.maps.InfoWindow();
-        var myLatlng = new google.maps.LatLng(40.7110411, -74.0110326);
-
-        var marker = new google.maps.Marker({
-            position: myLatlng,
-            map: map
-        });
-        (function (marker) {
-            google.maps.event.addListener(marker, "click", function (e) {
-                infoWindow.setContent("" +
-                    "<div class='map-properties contact-map-content'>" +
-                    "<div class='map-content'>" +
-                    "<p class='address'>20-21 Kathal St. Tampa City, FL</p>" +
-                    "<ul class='map-properties-list'> " +
-                    "<li><i class='flaticon-phone'></i>  +0477 8556 552</li> " +
-                    "<li><i class='flaticon-phone'></i>  info@themevessel.com</li> " +
-                    "<li><a href='index.html'><i class='fa fa-globe'></i>  http://www.example.com</li></a> " +
-                    "</ul>" +
-                    "</div>" +
-                    "</div>");
-                infoWindow.open(map, marker);
-            });
-        })(marker);
-    }
-    LoadMap();
-</script>
-{% endblock %}
 
 {% endblock %}

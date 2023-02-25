@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load humanize %} 
 {% block title %} Car Zone - {{ user.username }} Dashboard {% endblock %}
 {% block content %}
 
@@ -38,13 +38,17 @@
 		</tr>
 	  </thead>
 	  <tbody>
+        {% for car in cars %}
 		<tr>
-		  <th scope="row">1</th>
-		  <td>Lamborgini Huracan</td>
-		  <td>Austin</td>
-		  <td>$25000</td>
-		  <td><a href="#" class="btn btn-outline-dark">View Car</a></td>
+		  <th scope="row">{{ forloop.counter }}</th>
+		  <td>{{ car.car_title }} </td>
+		  <td>{{ car.state }}, {{ car.city }}  </td>
+		  <td>${{ car.price |intcomma }} </td>
+		  <td>
+            {% comment %} <a href="{% url 'cardeteils' car.car_id %}" class="btn btn-outline-dark"><i class="fa fa-eye" aria-hidden="true"></i></a>  {% endcomment %}
+        </td>
 		</tr>
+        {% endfor %}
 	  </tbody>
 	</table>
 </div>

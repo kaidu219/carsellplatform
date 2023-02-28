@@ -23,6 +23,7 @@
 
 <div class="container mt-50 mb-50">
     {% include 'includes/messages.html' %}
+    {% if allInquires %}
 	<div class="main-title" style="text-align:left !important;">
             <h1>Welcome, <span>{{ user.first_name }}!</span></h1>
             <p>Here are the cars that you have inquired about</p>
@@ -45,12 +46,19 @@
 		  <td>{{ car.state }}, {{ car.city }}  </td>
 		  <td>${{ car.price |intcomma }} </td>
 		  <td>
-            {% comment %} <a href="{% url 'cardeteils' car.car_id %}" class="btn btn-outline-dark"><i class="fa fa-eye" aria-hidden="true"></i></a>  {% endcomment %}
+            <a href="{% url 'cardeteils' car.id %}" class="btn btn-outline-dark"><i class="fa fa-eye" aria-hidden="true"></i></a> 
+            <a href="{% url 'delete_inquiry' car.id %}" class="btn btn-outline-dark"><i class="fa fa-trash" aria-hidden="true"></i></a> 
         </td>
 		</tr>
         {% endfor %}
-	  </tbody>
+	  </tbody> 
 	</table>
+    {% else %}
+        <div class="main-title" style="text-align:left !important;">
+            <h1>Welcome, <span>{{ user.first_name }}!</span></h1>
+            <p>You don't have any inquires yet.</p>
+        </div>
+    {% endif %}
 </div>
 
 <!--   Dashboard End   -->

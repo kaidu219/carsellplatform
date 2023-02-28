@@ -46,7 +46,7 @@ def inquiry(request):
         send_mail(
         'New car inquiry',
         'You have new car inquire for the car ' + car_title + '\nPlease login to your admin panel for more information!',
-        'kaidu219@gmail.com',
+        'carsellplatformdjango@gmail.com',
         [admin_email],
         fail_silently=False,
         )
@@ -56,6 +56,7 @@ def inquiry(request):
         return redirect('/cars/'+car_id)
         
 
-def delete_inquiry(request, car_id):
-    Contact.objects.filter(car_id = car_id)
-    messages.success(request, 'Your inquiry was succes')
+def delete_inquiry(request, id):
+    Contact.objects.filter(car_id = id).delete()
+    messages.success(request, 'Your inquiry was successfully delete!')
+    return redirect('/accounts/dashboard')

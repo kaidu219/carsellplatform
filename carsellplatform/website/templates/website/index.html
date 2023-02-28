@@ -148,10 +148,10 @@
                         </div>
                         <div class="detail">
                             <h1 class="title">
-                                <a href="{% url 'cardeteils' fcar.id %}">{{ fcar.model }}</a>
+                                <a href="{% url 'cardetails' fcar.id %}">{{ fcar.model }}</a>
                             </h1>
                             <div class="location">
-                                <a href="{% url 'cardeteils' fcar.id %}">
+                                <a href="{% url 'cardetails' fcar.id %}">
                                     <i class="flaticon-pin"></i>{{ fcar.state }}, {{ fcar.city }}
                                 </a>
                             </div>
@@ -194,7 +194,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="car-box">
                     <div class="car-thumbnail">
-                        <a href="{% url 'cardeteils' car.id %}" class="car-img">
+                        <a href="{% url 'cardetails' car.id %}" class="car-img">
                             <div class="tag">For Sale</div>
                             <img class="d-block w-100" src="{{car.car_main_photo.url}}" alt="car">
                             <div class="facilities-list clearfix">
@@ -234,7 +234,7 @@
                         </div>
                     </div>
                     <div class="detail">
-                        <a href="{% url 'cardeteils' car.id %}">
+                        <a href="{% url 'cardetails' car.id %}">
                         <h1 class="title"> {{ car.car_title }} </h1>
                         <div class="location">    
                             <i class="flaticon-pin"></i>{{ car.state }}, {{ car.city }} 

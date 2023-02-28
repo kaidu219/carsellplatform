@@ -1,12 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import CarPhoto, Car
 from django.core.paginator import Paginator
-from django.db.models import Max, Min
+from .forms import CarForm, CarPhotoForm
 
 # Create your views here.
 def allcars(request):
     allcars = Car.objects.all()
-    paginator = Paginator(allcars, 1)
+    paginator = Paginator(allcars, 2)
     page = request.GET.get('page')
     paged_cars = paginator.get_page(page)
 
@@ -39,6 +39,7 @@ def cardetails(request, id):
         'title': cars
     }
     return render(request, 'cars/car-details.html', context=context)  
+
 
 
 def search(request):
@@ -103,3 +104,39 @@ def search(request):
         
     }
     return render(request, 'cars/search.html', context)
+
+
+
+def add_car(request):
+    if request.method == 'POST':
+        car_form = CarForm(request.POST, request.FILES)
+        cars_photo_form = CarPhotoForm(request.POST, request.FILES)
+
+        if car_form.is_valid() and cars_photo_form.is_valid():
+            car = car_form.save(commit=False)
+            car.save()
+            cars_photo_form.instance.car_photo = car
+            cars_photo_form.save()
+
+            #Saving main photo
+            if 'car_main_photo' in request.FILES:
+                car.car_main_photo = request.FILES['car_main_photo']
+                car.save()
+
+            return redirect('cardetails', id = car.id) 
+        
+    else:
+        car_form = CarForm()
+        cars_photo_form = CarPhotoForm()    
+
+    context = {
+        'car_form': car_form,
+        'cars_photo_form': cars_photo_form
+        }
+
+
+
+    return render(request, 'cars/add_car.html', {
+        'car_form': car_form,
+        'cars_photo_form': cars_photo_form
+        }) 

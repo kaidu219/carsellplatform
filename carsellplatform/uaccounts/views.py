@@ -73,7 +73,7 @@ def dashboard(request):
         carListView.append(car)
         
     context = {
-        'allInquires':allInquires,
+        'allInquires': allInquires,
         'cars': carListView,
     }
     

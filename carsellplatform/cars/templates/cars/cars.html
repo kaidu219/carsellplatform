@@ -79,7 +79,11 @@
                                     <li>{{car.color }}</li>
                                     <li>{{ car.year }}</li>
                                 </ul>
-                                    <b>Advertisment created:</b> <br> {{ car.created_date|date:'d-m-Y H:i:s' }}
+                                    <b>Ad created
+                                        {% if car.owner %}
+                                        by <span>{{ car.owner.first_name }} {{ car.owner.last_name }}</span>
+                                        {% endif %}:</b> <br>
+                                     {{ car.created_date|date:'d-m-Y H:i:s' }}
                             </div>
                         </div>
                     </div>

@@ -2,17 +2,17 @@
 {% extends 'base.html' %}
 
 {% load static %}
-{% block title %} Add car {% endblock %}
+{% block title %} Update car {% endblock %}
 {% block content %}
 
 <!-- Sub banner start -->
 <div class="sub-banner overview-bgi">
     <div class="container breadcrumb-area">
         <div class="breadcrumb-areas">
-            <h1>Add new car</h1>
+            <h1>Update car</h1>
             <ul class="breadcrumbs">
                 <li><a href="{% url 'home' %}">Home</a></li>
-                <li class="active">Add new car</li>
+                <li class="active">Update car</li>
             </ul>
         </div>
     </div>
@@ -24,19 +24,19 @@
     <div class="container">
         <!-- Main title -->
         <div class="main-title text-center">
-            <h1>The process of adding a car user - <span>{{user.first_name}}</span></h1>
-            <p>It's the form for adding your car </p>
+            <h1>Process car updating user - <span>{{user.first_name}}</span></h1>
+            <p>It's the form for updating your car </p>
         </div>
         {% include 'includes/messages.html' %}
-        <form action = '{% url 'add_car' %}' method='POST' enctype="multipart/form-data">
+        <form method='POST' enctype="multipart/form-data">
             {% csrf_token %}
-            {{ car_form.as_p }} 
+            {{ car_form.as_p }}
             {{ car_form.media }} 
-            {{ cars_photo_form.as_p }}
+            
 
             <div class="col-md-12">
                 <div class="send-btn text-center">
-                    <button type="submit" class="btn btn-md button-theme">Add car</button>
+                    <button type="submit" class="btn btn-md button-theme">Update car</button>
                 </div>
             </div>
         </form>

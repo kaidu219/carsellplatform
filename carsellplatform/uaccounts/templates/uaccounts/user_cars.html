@@ -9,10 +9,10 @@
 <div class="sub-banner overview-bgi">
     <div class="container breadcrumb-area">
         <div class="breadcrumb-areas">
-            <h1>Dashboard</h1>
+            <h1>User's Car</h1>
             <ul class="breadcrumbs">
                 <li><a href="{% url 'home' %}">Home</a></li>
-                <li class="active">{{ user.username }}</li>
+                <li class="active">{{ user.first_name }}'s cars</li>
             </ul>
         </div>
     </div>
@@ -23,10 +23,10 @@
 
 <div class="container mt-50 mb-50">
     {% include 'includes/messages.html' %}
-    {% if allInquires %}
+    {% if usercars %}
 	<div class="main-title" style="text-align:left !important;">
-            <h1>Welcome, <span>{{ user.first_name }}!</span></h1>
-            <p>Here are the cars that you have inquired about</p>
+            <h1>Hey, <span>{{ user.first_name }}!</span></h1>
+            <p>Here is your cars that you added</p>
         </div>
 	<table class="table table-hover">
 	  <thead>
@@ -39,7 +39,7 @@
 		</tr>
 	  </thead>
 	  <tbody>
-        {% for car in cars %}
+        {% for car in usercars %}
 		<tr>
 		  <th scope="row">{{ forloop.counter }}</th>
 		  <td>{{ car.car_title }} </td>
@@ -47,16 +47,17 @@
 		  <td>${{ car.price |intcomma }} </td>
 		  <td>
             <a href="{% url 'cardetails' car.id %}" class="btn btn-outline-dark"><i class="fa fa-eye" aria-hidden="true"></i></a> 
-            <a href="{% url 'delete_inquiry' car.id %}" class="btn btn-outline-dark"><i class="fa fa-trash" aria-hidden="true"></i></a> 
+            <a href="{% url 'delete_car' car.id %}" class="btn btn-outline-dark"><i class="fa fa-trash" aria-hidden="true"></i></a> 
+            <a href="{% url 'update_car' car.id %}" class="btn btn-outline-dark"><i class="fa fa-pencil" aria-hidden="true"></i></a> 
         </td>
 		</tr>
-        {% endfor %}
+        {% endfor %} 
 	  </tbody> 
 	</table>
     {% else %}
         <div class="main-title" style="text-align:left !important;">
-            <h1>Welcome, <span>{{ user.first_name }}!</span></h1>
-            <p>You don't have any inquires yet.</p>
+            <h1>Hey, <span>{{ user.first_name }}!</span></h1>
+            <p>You have not published any cars yet.</p>
         </div>
     {% endif %}
 </div>

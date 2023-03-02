@@ -128,6 +128,12 @@
                         <br>
                         <h3 class="sidebar-title">Short Description</h3>
                         <ul>
+                            {% if car.owner %}
+                                <li>
+                                    <span>Owner:</span>{{ car.owner.first_name }} {{ car.owner.last_name }}
+                                </li>
+                            {% endif %}
+                            
                             <li>
                                 <span>Year:</span>{{ car.year }}
                             </li>
@@ -174,6 +180,7 @@
                             <li>
                                 <span>City:</span>{{ car.city }}
                             </li>
+                            
                         </ul>
                     </div>
 

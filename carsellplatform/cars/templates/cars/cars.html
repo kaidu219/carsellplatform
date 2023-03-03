@@ -42,20 +42,26 @@
                                 <div class="carbox-overlap-wrapper">
                                     <div class="overlap-box">
                                         <div class="overlap-btns-area">
+                                            <a class="overlap-btn" data-toggle="modal" data-target="#carOverviewModal{{forloop.counter}}">
+                                                <i class="fa fa-eye-slash"></i>
+                                            </a>
+                                            
                                             <div class="car-magnify-gallery">
-                                                {% for pic in car.carphoto_set.all %}
-                                                    {% if forloop.counter == 1 %}
-                                                        <a href="{{ pic.image.url }}" class="overlap-btn">
-                                                        <i class="fa fa-expand"></i></a>
-                                                    {% else %}
-                                                        <a href="{{ pic.image.url }}" class="hidden" >
-                                                    {% endif %}  
-                                                        <img class="hidden" src="{{ pic.image.url }}">
-                                                        </a>
+                                                    <a href="{{ car.car_main_photo.url }}" class="overlap-btn" data-sub-html="<h4>{{ car.car_title }}</h4><p>{{ car.description|truncatewords:20 }}</p>">
+                                                        <i class="fa fa-expand"></i>
+                                                        <img class="hidden" src="{{ car.car_main_photo.url }}" alt="hidden-img">
+                                                    </a>
+                                              
+                                                    {% for pic in  car.carphoto_set.all %}
+                                                    <a href="{{ pic.image.url }}" class="hidden" data-sub-html="<h4>{{ car.car_title }}</h4><p>{{ car.description|truncatewords:20 }}</p>">
+                                                        <img class="hidden" src="{{ pic.image.url }}" alt="hidden-img">
+                                                    </a>
+                                                
                                                 {% endfor %}
                                             </div>
                                         </div>
                                     </div>
+                                   
                                 </div>
                             </div>
                             <div class="detail">
@@ -259,4 +265,77 @@
     </div>
 </div>
 <!-- Featured car end -->
+{% block carOverviewModalLabel %}
+<!-- Car Overview Modal -->
+{% for car in paged_cars %}
+<div class="car-model-2">
+    <div class="modal fade" id="carOverviewModal{{forloop.counter}}" tabindex="-1" role="dialog" aria-labelledby="carOverviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title" id="carOverviewModalLabel">
+                        <h4>{{ car.car_title }}</h4>
+                        <h5><i class="flaticon-pin"></i>{{car.state}}, {{ car.city }} </h5>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row modal-raw">
+                        <div class="col-lg-6 modal-left">
+                            <div class="item active">
+                                <img src="{{ car.car_main_photo.url }}" alt="best-car" class="img-fluid modalLabel-1">
+                                <div class="sobuz">
+                                    <div class="price-box" style="padding-bottom: 5px;">
+                                        <span class="del-2">${{ car.price|intcomma  }} </span>
+                                    </div>
+                                    <div class="">
+                                        <a href="{% url 'cardetails' car.id %}" class="btn btn-md btn-round btn-theme">Convertible</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 modal-right">
+                            <div class="modal-right-content">
+                                <section>
+                                    <h3>Features</h3>
+                                    <div class="features">
+                                        <ul class="bullets">
+                                            {% for features in car.features %}
+                                            <li>{{ features }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </section>
+                                <section>
+                                    <h3>Overview</h3>
+                                    <ul class="bullets">
+                                        <li>Model</li>
+                                        <li>Year</li>
+                                        <li>Condition</li>
+                                        <li>Price</li>
+                                        <li>{{ car.model }}</li>
+                                        <li>{{ car.year }}</li>
+                                        <li>{{ car.condition }}</li>
+                                        <li>${{ car.price|intcomma  }}</li>
+                                    </ul>
+                                </section>
+                                <div class="description">
+                                    <h3>Description</h3>
+                                    {% autoescape off %}
+                                    <p class ="">{{ car.description|truncatewords:20 }}</p>
+                                    {% endautoescape %}
+                                    <a href="{% url 'cardetails' car.id %}" class="btn btn-md btn-round btn-theme">Show Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
 {% endblock %}

@@ -116,7 +116,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="car-box">
                     <div class="car-thumbnail">
-                        <a href="{% url 'cardeteils' car.id %}" class="car-img">
+                        <a href="{% url 'cardetails' car.id %}" class="car-img">
                             <div class="tag">For Sale</div>
                             <img class="d-block w-100" src="{{ car.car_main_photo.url }}" alt="car">
                             <div class="facilities-list clearfix">
@@ -133,12 +133,12 @@
                                 </ul>
                             </div>
                         </a>
-                        <div class="carbox-overlap-wrapper">
+                        {% comment %} <div class="carbox-overlap-wrapper">
                             <div class="overlap-box">
                                 <div class="overlap-btns-area">
-                                    {% comment %} <a class="overlap-btn" data-toggle="modal" data-target="#carOverviewModal">
+                                    <a class="overlap-btn" data-toggle="modal" data-target="#carOverviewModal">
                                         <i class="fa fa-eye-slash"></i>
-                                    </a> {% endcomment %}
+                                    </a> 
                                     <div class="car-magnify-gallery">
                                         {% for pic in  car.carphoto_set.all %}
                                         {% if forloop.counter == 1 %}
@@ -155,42 +155,38 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        {% comment %} <div class="carbox-overlap-wrapper"> 
+                        </div> {% endcomment %}
+                        <div class="carbox-overlap-wrapper"> 
                             <div class="overlap-box">
                                 <div class="overlap-btns-area">
-                                    <a class="overlap-btn" data-toggle="modal" data-target="#carOverviewModal">
+                                    <a class="overlap-btn" data-toggle="modal" data-target="#carOverviewModal{{forloop.counter}}">
                                         <i class="fa fa-eye-slash"></i>
                                     </a>
+                                    
                                     <div class="car-magnify-gallery">
-                                        <a href="img/car/car-1.jpg" class="overlap-btn" data-sub-html="<h4>Lamborghini Huracán</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy....</p>">
-                                            <i class="fa fa-expand"></i>
-                                            <img class="hidden" src="img/car/car-1.jpg" alt="hidden-img">
-                                        </a>
-                                        <a href="img/car/car-2.jpg" class="hidden" data-sub-html="<h4>Lexus GS Red Car</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy....</p>">
-                                            <img class="hidden" src="img/car/car-2.jpg" alt="hidden-img">
-                                        </a>
-                                        <a href="img/car/car-3.jpg" class="hidden" data-sub-html="<h4>2015 Porsche Cayenne</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy....</p>">
-                                            <img class="hidden" src="img/car/car-3.jpg" alt="hidden-img">
-                                        </a>
-                                        <a href="img/car/car-4.jpg" class="hidden" data-sub-html="<h4>Toyota Corolla</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy....</p>">
-                                            <img class="hidden" src="img/car/car-4.jpg" alt="hidden-img">
-                                        </a>
-                                        <a href="img/car/car-5.jpg" class="hidden" data-sub-html="<h4>Toyota Prius Specs</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy....</p>">
-                                            <img class="hidden" src="img/car/car-5.jpg" alt="hidden-img">
-                                        </a>
+                                            <a href="{{ car.car_main_photo.url }}" class="overlap-btn" data-sub-html="<h4>{{ car.car_title }}</h4><p>{{ car.description|truncatewords:20 }}</p>">
+                                                <i class="fa fa-expand"></i>
+                                                <img class="hidden" src="{{ car.car_main_photo.url }}" alt="hidden-img">
+                                            </a>
+                                      
+                                            {% for pic in  car.carphoto_set.all %}
+                                            <a href="{{ pic.image.url }}" class="hidden" data-sub-html="<h4>{{ car.car_title }}</h4><p>{{ car.description|truncatewords:20 }}</p>">
+                                                <img class="hidden" src="{{ pic.image.url }}" alt="hidden-img">
+                                            </a>
+                                        
+                                        {% endfor %}
                                     </div>
                                 </div>
                             </div>
-                        </div> {% endcomment %}
+                        </div> 
                         
                     </div>
                     <div class="detail">
                         <h1 class="title">
-                            <a href="{% url 'cardeteils' car.id %}">{{car.car_title}}</a>
+                            <a href="{% url 'cardetails' car.id %}">{{car.car_title}}</a>
                         </h1>
                         <div class="location">
-                            <a href="{% url 'cardeteils' car.id %}">
+                            <a href="{% url 'cardetails' car.id %}">
                                 <i class="flaticon-pin"></i>{{car.state}}, {{car.city}}
                             </a>
                         </div>
@@ -200,7 +196,7 @@
                             <p class="cartype">{{car.body_style}}</p>
                         </div>
                         <div class="pull-right">
-                            <p class="price">${{car.price}}</p>
+                            <p class="price">${{car.price |intcomma }}</p>
                         </div>
                     </div>
                 </div>
@@ -211,6 +207,77 @@
 </div>
 <!-- Featured car end -->
 
-
-
+{% block carOverviewModalLabel %}
+<!-- Car Overview Modal -->
+{% for car in cars %}
+<div class="car-model-2">
+    <div class="modal fade" id="carOverviewModal{{forloop.counter}}" tabindex="-1" role="dialog" aria-labelledby="carOverviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title" id="carOverviewModalLabel">
+                        <h4>{{ car.car_title }}</h4>
+                        <h5><i class="flaticon-pin"></i>{{car.state}}, {{ car.city }} </h5>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row modal-raw">
+                        <div class="col-lg-6 modal-left">
+                            <div class="item active">
+                                <img src="{{ car.car_main_photo.url }}" alt="best-car" class="img-fluid modalLabel-1">
+                                <div class="sobuz">
+                                    <div class="price-box" style="padding-bottom: 5px;">
+                                        <span class="del-2">${{ car.price|intcomma  }} </span>
+                                    </div>
+                                    <div class="">
+                                        <a href="{% url 'cardetails' car.id %}" class="btn btn-md btn-round btn-theme">Convertible</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 modal-right">
+                            <div class="modal-right-content">
+                                <section>
+                                    <h3>Features</h3>
+                                    <div class="features">
+                                        <ul class="bullets">
+                                            {% for features in car.features %}
+                                            <li>{{ features }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </section>
+                                <section>
+                                    <h3>Overview</h3>
+                                    <ul class="bullets">
+                                        <li>Model</li>
+                                        <li>Year</li>
+                                        <li>Condition</li>
+                                        <li>Price</li>
+                                        <li>{{ car.model }}</li>
+                                        <li>{{ car.year }}</li>
+                                        <li>{{ car.condition }}</li>
+                                        <li>${{ car.price|intcomma  }}</li>
+                                    </ul>
+                                </section>
+                                <div class="description">
+                                    <h3>Description</h3>
+                                    {% autoescape off %}
+                                    <p class ="c">{{ car.description|truncatewords:20 }}</p>
+                                    {% endautoescape %}
+                                    <a href="{% url 'cardetails' car.id %}" class="btn btn-md btn-round btn-theme">Show Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
 {% endblock %}

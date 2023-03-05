@@ -4,7 +4,9 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from contacts.models import Contact
 from cars.models import Car
-
+from django.views.generic import TemplateView
+from django.contrib.auth.mixins import LoginRequiredMixin
+# from forms import CommentForm
 
 def login(request):
     if request.method == 'POST':
@@ -60,24 +62,53 @@ def register(request):
     else:
         return render(request, 'uaccounts/register.html') 
 
+class DashboardView(LoginRequiredMixin, TemplateView):
+    template_name = 'uaccounts/dashboard.html'
+    
+    def get_context_data(self, **kwargs):
+        user_id = self.request.user.id
+        context = super().get_context_data(**kwargs)
+        context['allInquires'] = Contact.objects.all().order_by('-created_date').filter(user_id=user_id)
+        carList = [i.car_id for i in context['allInquires']]
+        carListView = []
+    
+        for cl in carList:
+            car = Car.objects.get(id = cl)
+            carListView.append(car)
+        context['cars'] =  carListView  
 
-@login_required(login_url='login')
-def dashboard(request):
-    user_id = request.user.id
-    allInquires = Contact.objects.all().order_by('-created_date').filter(user_id=user_id)
-    carList = [i.car_id for i in allInquires]
-    carListView = []
+        return context
+
+# @login_required(login_url='login')
+# def dashboard(request):
+#     user_id = request.user.id
+#     allInquires = Contact.objects.all().order_by('-created_date').filter(user_id=user_id)
+#     carList = [i.car_id for i in allInquires]
+#     carListView = []
     
-    for cl in carList:
-        car = Car.objects.get(id = cl)
-        carListView.append(car)
+#     for cl in carList:
+#         car = Car.objects.get(id = cl)
+#         carListView.append(car)
         
-    context = {
-        'allInquires': allInquires,
-        'cars': carListView,
-    }
+#     context = {
+#         'allInquires': allInquires,
+#         'cars': carListView,
+#     }
     
-    return render(request, 'uaccounts/dashboard.html', context)
+#     return render(request, 'uaccounts/dashboard.html', context)
+
+
+class UsercarsView(LoginRequiredMixin, TemplateView):
+    template_name = 'uaccounts/user_cars.html'
+
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         user_id = self.request.user.id
+#         user = User.objects.get(id = user_id)
+#         context['usercars'] = user.cars.all()
+
+#         return context 
+    
 
 @login_required(login_url='login')
 def user_cars(request):
@@ -89,3 +120,25 @@ def user_cars(request):
         'usercars': usercars,
     }
     return render(request, 'uaccounts/user_cars.html', context)
+
+# class AddCommentForm(LoginRequiredMixin):
+
+    
+
+# @login_required(login_url='login')
+# def add_comment(request, pk):
+#     car = Car.objects.get(id=pk)
+#     if request.method == 'POST':
+#         form = CommentForm(request.POST)
+        
+#         if form.is_valid():
+#             if request.user.is_authenticated:
+#                 comment = form.save(commit=False)
+#                 comment.car = car
+#                 comment.user = request.user
+#                 comment.save()
+#             else:
+#                 messages.warning(request, 'Please log in to add a comment')
+#                 return redirect('login')
+    
+#     return redirect('cardetails', id=pk)

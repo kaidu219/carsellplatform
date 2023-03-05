@@ -33,7 +33,7 @@
             <div class="row">
                 <div class="col-lg-7">
                     <div class="row">
-                        {% for field in form %}
+                        {% comment %} {% for field in form %}
                         {% if field == form.message  %}
                         <div class="col-md-12 text-left">
                             <div class="form-group">
@@ -56,7 +56,43 @@
                             <div class="send-btn text-center">
                                 <button type="submit" class="btn btn-md button-theme">Send Message</button>
                             </div>
+                        </div> {% endcomment %}
+                        <div class="col-md-6 text-left">
+                            <div class="form-group name">
+                                {{ form.full_name.label_tag }}
+                                {{ form.full_name }}
+                            </div>
                         </div>
+
+                       <div class="col-md-6">
+                            <div class="form-group email">
+                                {{ form.email.label_tag }}
+                                {{ form.email }}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group subject">
+                                {{ form.subject.label_tag }}
+                                {{ form.subject }}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group number">
+                                {{ form.phone.label_tag }}
+                                {{ form.phone }}
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group message">
+                                {{ form.message.label_tag }}
+                                {{ form.message }}
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="send-btn text-center">
+                                <button type="submit" class="btn btn-md button-theme">Send Message</button>
+                            </div>
+                        </div> 
                     </div>
                 </div>
                 <div class="col-lg-5">

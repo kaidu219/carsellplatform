@@ -11,7 +11,6 @@ class ContactForm(forms.Form):
             'placeholder': 'Full name',
         })
     )
-
     email = forms.EmailField(
         label = 'Email',
         widget = forms.EmailInput(attrs={
@@ -19,7 +18,6 @@ class ContactForm(forms.Form):
             'placeholder': 'Email',
         })
     )
-
     subject = forms.CharField(
         label = 'Subject',
         widget = forms.TextInput(attrs={
@@ -27,7 +25,6 @@ class ContactForm(forms.Form):
             'placeholder': 'Subject',
         })
     )  
-    
     phone = forms.CharField(
         label = 'Phone Number',
         widget = forms.TextInput(attrs={
@@ -35,7 +32,6 @@ class ContactForm(forms.Form):
             'placeholder': 'Phone Number',
         })
     )  
-
     message = forms.CharField(
         label = 'Message',
         widget = forms.Textarea(attrs={

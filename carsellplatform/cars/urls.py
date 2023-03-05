@@ -1,13 +1,13 @@
 from django.urls import path
-from .views import allcars, cardetails, search, add_car, delete_car, update_car
+from .views import AllCarsView, CardetailsView, SearchView, CarCreateView, CarDeleteView, UpdateCar
 
 
 
 urlpatterns = [
-    path("", allcars, name='cars'),
-    path("search", search, name='search'),
-    path("add_car", add_car, name='add_car'),
-    path("cardetails/<str:id>", cardetails, name='cardetails'),
-    path("delete_car/<str:id>", delete_car, name='delete_car'),
-    path("update_car/<str:id>", update_car, name='update_car'),
+    path("", AllCarsView.as_view(), name='cars'),
+    path("search", SearchView.as_view(), name='search'),
+    path("add_car", CarCreateView.as_view(), name='add_car'),
+    path("cardetails/<str:id>", CardetailsView.as_view(), name='cardetails'),
+    path("delete_car/<str:id>", CarDeleteView.as_view(), name='delete_car'),
+    path("update_car/<str:id>", UpdateCar.as_view(), name='update_car'),
 ]

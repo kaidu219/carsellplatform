@@ -1,0 +1,52 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block title %} {{ title }} {% endblock %}
+{% block content %}
+
+<!-- Sub banner start -->
+<div class="sub-banner overview-bgi">
+    <div class="container breadcrumb-area">
+        <div class="breadcrumb-areas">
+            <h1>Delete {{ car }}</h1>
+            <ul class="breadcrumbs">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li class="active">Delete</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Sub Banner end -->
+
+<!-- Service center strat -->
+<div class="about-car content-area-5">
+    <div class="container" style="margin: 0 0 0 300px">
+        <h1>Delete Car "{{ car }}" </h1>
+        <p>Are you sure want to delete {{ car }}?  </p>
+        <form method="POST">
+            {% csrf_token %}
+            <button type='submit' class="btn btn-danger">Delete</button>
+            <a href="{% url 'user_cars' %}" class="btn btn-secondary">Cancel</a>
+    </div>
+</div>
+<!-- Service center end -->
+
+
+
+<!-- Intro section start -->
+<div class="intro-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-md-8 col-sm-12">
+                <div class="intro-text">
+                    <h3>Do You Have Questions ?</h3>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-12">
+                <a href="{% url 'contact' %}" class="btn btn-md">Get in Touch</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Intro section end -->
+
+{% endblock %}

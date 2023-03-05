@@ -30,9 +30,12 @@
         {% include 'includes/messages.html' %}
         <form method='POST' enctype="multipart/form-data">
             {% csrf_token %}
-            {{ car_form.as_p }}
-            {{ car_form.media }} 
-            
+            {{ form.as_p }}
+            {{ from.media }} 
+            <h2> Additional photos </h2>
+            {% for photo_form in car_photos %}
+                {{  photo_form.as_p }}
+            {% endfor %}
 
             <div class="col-md-12">
                 <div class="send-btn text-center">

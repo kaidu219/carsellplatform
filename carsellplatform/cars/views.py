@@ -1,17 +1,18 @@
 from django.views import View
 from django.db import transaction
 from django.contrib import messages
-from django.urls import reverse_lazy
-from django.contrib.auth.models import User
-from django.core.paginator import Paginator
-from django.views.generic import TemplateView
-from django.views.generic.detail import DetailView
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth.decorators import login_required
-from django.views.generic.edit import DeleteView, CreateView, UpdateView
-from django.shortcuts import render, redirect, get_object_or_404
+from django.urls import reverse_lazy 
+from django.contrib.auth.models import User #To withdraw data from a registered account
+from django.core.paginator import Paginator #Paginator
+from django.views.generic import TemplateView #BaseView class for view templates
+from django.views.generic.detail import DetailView #BaseView class for view Detail page 
+from django.contrib.auth.mixins import LoginRequiredMixin #instead of decorator @login_required 
+from django.contrib.auth.decorators import login_required #decorator for check authentificated
+from django.views.generic.edit import DeleteView, CreateView, UpdateView #BaseView class for delete, create(add), update data - instead of function delete_car, add_car, update_car
+from django.shortcuts import render, redirect, get_object_or_404 #func for direct to page
 
-from .utils import get_search_filters
+from uaccounts.forms import CommentForm
+from .utils import get_search_filters, CarOwnerOrAdminMixin
 from .forms import CarForm, CarPhotoForm
 from .models import CarPhoto, Car
 
@@ -19,7 +20,6 @@ from .models import CarPhoto, Car
 
 class AllCarsView(TemplateView):
     template_name = 'cars/cars.html'
-
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -67,12 +67,13 @@ class CardetailsView(DetailView):
     context_object_name = 'car'
     pk_url_kwarg = 'id'
 
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context['car'] = Car.objects.get(pk = id)
-    #     context['title'] = cars = Car.objects.get(pk = id).car_title
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        # context['car'] = Car.objects.get(id = id)
+        # context['title'] = cars = Car.objects.get(pk = id).car_title
+        context['comment_form'] = CommentForm()
 
-    #     return context
+        return context
 
 # def cardetails(request, id):
 #     car = Car.objects.get(pk = id)
@@ -273,7 +274,7 @@ class CarCreateView(LoginRequiredMixin, CreateView):
 #         }) 
 
 
-class CarDeleteView(LoginRequiredMixin, DeleteView):
+class CarDeleteView(LoginRequiredMixin, CarOwnerOrAdminMixin, DeleteView):
     model = Car
     success_url = reverse_lazy('user_cars')
     pk_url_kwarg = 'id'
@@ -298,7 +299,7 @@ class CarDeleteView(LoginRequiredMixin, DeleteView):
 
          
       
-class UpdateCar(LoginRequiredMixin, UpdateView):
+class UpdateCar(LoginRequiredMixin, CarOwnerOrAdminMixin, UpdateView):
         model = Car
         login_url = 'login'
         form_class = CarForm
@@ -372,3 +373,14 @@ class UpdateCar(LoginRequiredMixin, UpdateView):
 #     }
 
 #     return render(request, 'cars/update_car.html', context)
+
+def ownerscars(requast, id):
+    user = User.objects.get(id=id)
+    usercars = user.cars.all()
+
+    context = {
+        'owner': user,
+        'usercars': usercars,
+    }
+    return render(requast, 'cars/ownerscars.html', context)
+

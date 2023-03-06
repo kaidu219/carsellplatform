@@ -6,7 +6,7 @@ from contacts.models import Contact
 from cars.models import Car
 from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
-# from forms import CommentForm
+from .forms import CommentForm
 
 def login(request):
     if request.method == 'POST':
@@ -64,7 +64,8 @@ def register(request):
 
 class DashboardView(LoginRequiredMixin, TemplateView):
     template_name = 'uaccounts/dashboard.html'
-    
+    login_url = 'login'
+
     def get_context_data(self, **kwargs):
         user_id = self.request.user.id
         context = super().get_context_data(**kwargs)
@@ -100,30 +101,44 @@ class DashboardView(LoginRequiredMixin, TemplateView):
 
 class UsercarsView(LoginRequiredMixin, TemplateView):
     template_name = 'uaccounts/user_cars.html'
+    login_url = 'login'
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        user_id = self.request.user.id
+        user = User.objects.get(id = user_id)
+        context['usercars'] = user.cars.all()
 
-#     def get_context_data(self, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         user_id = self.request.user.id
-#         user = User.objects.get(id = user_id)
-#         context['usercars'] = user.cars.all()
-
-#         return context 
+        return context 
     
 
-@login_required(login_url='login')
-def user_cars(request):
-    user_id = request.user.id
-    user = User.objects.get(id = user_id)
-    usercars = user.cars.all()
+# @login_required(login_url='login')
+# def user_cars(request):
+#     user_id = request.user.id
+#     user = User.objects.get(id = user_id)
+#     usercars = user.cars.all()
     
-    context = {
-        'usercars': usercars,
-    }
-    return render(request, 'uaccounts/user_cars.html', context)
+#     context = {
+#         'user': user,
+#         'usercars': usercars,
+#     }
+#     return render(request, 'uaccounts/user_cars.html', context)
 
-# class AddCommentForm(LoginRequiredMixin):
 
     
+class AddCommentView(LoginRequiredMixin, TemplateView):
+    def post(self, request, pk, *args, **kwargs):
+        car = Car.objects.get(id=pk)
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            if request.user.is_authenticated:
+                comment = form.save(commit=False)
+                comment.car = car
+                comment.user = request.user
+                comment.save()
+            else:
+                messages.warning(request, 'Please log in to add a comment')
+                return redirect('login')
+        return redirect('cardetails', id=pk)
 
 # @login_required(login_url='login')
 # def add_comment(request, pk):

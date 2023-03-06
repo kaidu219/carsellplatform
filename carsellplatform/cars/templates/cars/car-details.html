@@ -96,6 +96,33 @@
                                      <p>{{ car.description|default:"Please search information regarding this auto in Wikipedia" }}</p>
                                   {% endautoescape %}
                                 </div>
+                                <div> 
+                                    <h3 class="heading-2">
+                                        Comments:
+                                    </h3>
+                                   <hr>
+                                   <div>
+                                    <form action={% url 'add_comment' car.pk %} method='POST'>
+                                    {% csrf_token %}
+                                    {{ comment_form.as_p }}
+                                    <div class="send-btn text-center">
+                                    <button class="btn btn-danger">Add a comment</button>
+                                    </div>
+                                    </form>
+                                   </div>
+                                   <hr>
+                                <div>
+                                   {% for comment in car.comments.all %}
+                                   {% if comment.user.first_name == ''%}
+                                   <span> <a href='{% url 'ownerscars' comment.user.id %}'>{{ comment.user.username }}</a></span> - <small>{{ comment.date_added }}</small>: <br>
+                                   {% else %}
+                                   <span> <a href='{% url 'ownerscars' comment.user.id %}'>{{ comment.user.first_name }} {{ comment.user.last_name }}</a></span> - <small>{{ comment.date_added }}</small>: <br>
+                                   {% endif %}
+                                   <b><q>{{ comment.text }}</q></b>
+                                    <hr>
+                                   {% endfor %}
+                                </div>
+                                </div>
                             </div>
                             <div class="tab-pane fade" id="two" role="tabpanel" aria-labelledby="two-tab">
                                 <div class="features-info mb-50">

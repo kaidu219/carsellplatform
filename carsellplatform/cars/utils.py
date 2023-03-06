@@ -1,4 +1,6 @@
 from .models import Car
+from django.contrib.auth.mixins import UserPassesTestMixin
+
 
 
 def get_search_filters():
@@ -19,3 +21,8 @@ def get_search_filters():
     }
 
     return context
+
+class CarOwnerOrAdminMixin(UserPassesTestMixin):
+    def test_func(self):
+        car = self.get_object()
+        return self.request.user == car.owner or self.request.user.is_superuser

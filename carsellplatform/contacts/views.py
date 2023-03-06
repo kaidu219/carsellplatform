@@ -53,7 +53,7 @@ def inquiry(request):
            
         contact.save()
         messages.success(request, 'Your request has been submited, we will get back to you shortly')
-        return redirect('/cars/'+car_id)
+        return redirect('/cars/cardetails/'+car_id)
         
 
 def delete_inquiry(request, id):

@@ -87,7 +87,7 @@
                                 </ul>
                                     <b>Ad created
                                         {% if car.owner %}
-                                        by <span>{{ car.owner.first_name }} {{ car.owner.last_name }}</span>
+                                        by <span><a href="{% url 'ownerscars' car.owner.id %}">{{ car.owner.first_name }} {{ car.owner.last_name }}</a></span>
                                         {% endif %}:</b> <br>
                                      {{ car.created_date|date:'d-m-Y H:i:s' }}
                             </div>

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load humanize %} 
-{% block title %} Car Zone - My cars {% endblock %}
+{% block title %}Cars of user - {{ owner.first_name }} {{ owner.last_name }}{% endblock %}
 {% block content %}
 
 
@@ -12,11 +12,7 @@
             <h1>User's Cars</h1>
             <ul class="breadcrumbs">
                 <li><a href="{% url 'home' %}">Home</a></li>
-                {% if user.first_name == ''%}
-                <li class="active">{{ user.username }}'s cars</li>
-                {% else %}
-                <li class="active">{{ user.first_name }}'s cars</li>
-                {% endif %}
+                <li class="active">{{ owner }}'s cars</li>
             </ul>
         </div>
     </div>
@@ -28,14 +24,19 @@
 <div class="container mt-50 mb-50">
     {% include 'includes/messages.html' %}
     {% if usercars %}
+
+    {% if request.user.id == owner.id%}
 	<div class="main-title" style="text-align:left !important;">
-            {% if user.first_name %}
-            <h1>Hey, <span>{{ user.first_name }}!</span></h1>
-            {% else %}
-            <h1>Hey, <span>{{ user.username }}!</span></h1>
-            {% endif %}
-            <p>Here is your cars that you added</p>
-        </div>
+            <h1>Dear, <span>{{ owner.first_name }}!</span></h1>
+            <p>Here is your cars that you published on a website</p>
+    </div>
+    {% else %}
+    <div class="main-title" style="text-align:left !important;">
+        <h1><span>{{ owner.first_name }}</span>'s cars list </h1>
+        <p>Here is cars that {{ owner.first_name }} published on a website</p>
+    </div>  
+
+    {% endif %}
 	<table class="table table-hover">
 	  <thead>
 		<tr>
@@ -55,18 +56,26 @@
 		  <td>${{ car.price |intcomma }} </td>
 		  <td>
             <a href="{% url 'cardetails' car.id %}" class="btn btn-outline-dark"><i class="fa fa-eye" aria-hidden="true"></i></a> 
+            {% if request.user.id == owner.id or request.user.is_superuser %}
             <a href="{% url 'delete_car' car.id %}" class="btn btn-outline-dark"><i class="fa fa-trash" aria-hidden="true"></i></a> 
             <a href="{% url 'update_car' car.id %}" class="btn btn-outline-dark"><i class="fa fa-pencil" aria-hidden="true"></i></a> 
+            {% endif %}
         </td>
 		</tr>
         {% endfor %} 
 	  </tbody> 
 	</table>
     {% else %}
+         {% if request.user.id == owner.id%}
         <div class="main-title" style="text-align:left !important;">
-            <h1>Hey, <span>{{ user.first_name }}!</span></h1>
+            <h1>Hey, <span>{{ owner.user.first_name }}!</span></h1>
             <p>You have not published any cars yet.</p>
         </div>
+        {% else %}
+        <div class="main-title" style="text-align:left !important;">
+            <p>{{ owner.user.first_name }} have not published any cars yet.</p>
+        </div>
+        {% endif %}
     {% endif %}
 </div>
 

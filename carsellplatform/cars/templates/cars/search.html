@@ -267,8 +267,9 @@
                                 <div class="description">
                                     <h3>Description</h3>
                                     {% autoescape off %}
-                                    <p class ="c">{{ car.description|truncatewords:20 }}</p>
+                                    <p>{{ car.description|truncatewords:20 }}</p>
                                     {% endautoescape %}
+                                    <br>
                                     <a href="{% url 'cardetails' car.id %}" class="btn btn-md btn-round btn-theme">Show Detail</a>
                                 </div>
                             </div>

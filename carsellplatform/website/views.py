@@ -22,6 +22,7 @@ class IndexView(TemplateView):
       context = super().get_context_data(**kwargs)
       context['title'] = 'Home'
       context['all_cars'] = Car.objects.order_by('-created_date')
+      context['teams'] = Team.objects.all()
       context['featured_cars'] = Car.objects.all().order_by('-created_date').filter(is_featured=True)
       context.update(**get_search_filters())
 

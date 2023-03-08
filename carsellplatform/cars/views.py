@@ -86,7 +86,7 @@ class CardetailsView(DetailView):
 
 
 class SearchView(View):
-    def get(request):
+    def get(self, request):
         cars = Car.objects.order_by('-created_date')
         
         if 'keyword' in request.GET:

@@ -1,5 +1,6 @@
 from django import forms 
 from cars.models import Car, CarPhoto
+from captcha.fields import CaptchaField
 
 
 class ContactForm(forms.Form):
@@ -40,4 +41,6 @@ class ContactForm(forms.Form):
             'placeholder': 'Enter your message',
         })
     )  
+    
+    captcha = CaptchaField()
     

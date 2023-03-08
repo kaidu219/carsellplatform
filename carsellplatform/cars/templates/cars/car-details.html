@@ -156,8 +156,10 @@
                         <h3 class="sidebar-title">Short Description</h3>
                         <ul>
                             {% if car.owner %}
-                                <li>
+                                <li><a href="{% url 'ownerscars' car.owner.id  %}">
                                     <span>Owner:</span>{{ car.owner.first_name }} {{ car.owner.last_name }}
+                                    </a>
+                                    
                                 </li>
                             {% endif %}
                             

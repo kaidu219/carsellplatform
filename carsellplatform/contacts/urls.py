@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import inquiry, delete_inquiry
-from 
+
 
 
 urlpatterns = [

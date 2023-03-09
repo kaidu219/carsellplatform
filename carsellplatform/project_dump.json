@@ -1,0 +1,1264 @@
+[
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$390000$ehwKKB3BzlwVNI9ru7GNFh$4urnB/6xjxIM90jKcWODyM639hMWhZ5BM+JS9Zz4la4=",
+        "last_login": "2023-03-09T11:20:48Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "Askar",
+        "last_name": "Almaz uulu",
+        "email": "kaidu219@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2023-02-25T08:21:53Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$390000$zO4B7hZp5s6FePXDq8WnLm$LApogA6eZUte3qTCh76Mgh1NeBIRXwmSQOVMjVNt25Y=",
+        "last_login": "2023-03-08T15:06:51.994Z",
+        "is_superuser": false,
+        "username": "almaza",
+        "first_name": "Almazbek",
+        "last_name": "Atambaev",
+        "email": "almaz@mail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-03-01T11:37:59.949Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "!ZmoerkNwn9UggoBBykdG9FkczZgKrIPESHqKp21o",
+        "last_login": "2023-03-06T09:13:28.104Z",
+        "is_superuser": false,
+        "username": "user",
+        "first_name": "Кайду",
+        "last_name": "Бердикожоев",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-03-06T09:13:28.077Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "!Hrv77FiBLnGG0mI2LTQIijwDRkhjayvzgNavOW6g",
+        "last_login": "2023-03-06T09:15:01.955Z",
+        "is_superuser": false,
+        "username": "carsell",
+        "first_name": "Carsell",
+        "last_name": "Platform",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-03-06T09:13:56.721Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$390000$rl46naoK1qaz9LXRNuXhlJ$DiI5vrBRuKt5axgV4GV4XNiFr8pm6nRueb84eby8k/8=",
+        "last_login": "2023-03-06T10:50:54.943Z",
+        "is_superuser": false,
+        "username": "Albert",
+        "first_name": "",
+        "last_name": "",
+        "email": "khan_lola@mail.ru",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-03-06T10:50:54.619Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$390000$NENwaZIEBgMRvdNpdGUPwE$HXtS1k0BQdi3auXAaEJ3ZE6FhaPM5qvWhvb8OHVJpx8=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "kaidu",
+        "first_name": "asdas",
+        "last_name": "asdasda",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-03-08T15:11:12Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sites.site",
+    "fields": {
+        "domain": "localhost:8000",
+        "name": "localhost:8000"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "67vus2g7ap35gvtyopj54rjam8a5zsjd",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSE8ynRw6d5vIAMMUjU0Ke3K-O_apAvd3nPOfYlA21rD1nkJUxZnocXpd4uUHtx2kO_UbrNMc1uXKcpdkQft8jpnfl4O9--gUq_fuoBnBEde4-Ahs1WWrTajNt5iGhW4lEvxLjudkAaDiBZcBCRWoAnF-wO9BDbW:1pQ1Bo:h8GWrpSXEgYqWyMtCh4qLbWSNQqzUOlB3BzrBzgUZy8",
+        "expire_date": "2023-02-23T07:17:52.860Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "fr7nuzaav628h56fnlt8uh9775mahnj2",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hA6LYW6dO8ZyMwwSNVAUtqV8e7apAvd_vfef6mA25rD1mQJc1RnBer0uxHyQ8oO4h3LrWquZV1m0ruiD9r0tUZ5Xg737yBjy9_aWR6xp3EQAmHwnRjXG-HkiAc_WfYAyRg_RfRCdrI2AThHg2Bn2Dv1_gDp2Dfb:1pSvnw:WBXurz9xzhEyO5VeB86DctHoyWzIdsfe8pATuzGVChM",
+        "expire_date": "2023-03-03T08:09:16.457Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "j9mjmlgoeyrjf5ohruga753o55l0g53q",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFli4AevfcbyC6wUjWQlPZk_Hdp0oNmLpN5M_MWHrc1-62lxc9RXIUVp9-MMDxT2UF8YLlXGWpZl5nkXpEHbXKqMb1uR_fvIGPLfc1pVMaAvViNAI7OZgSriVQ3yAaJ3WCtCgEMMCPqENTYlTg5hoHE5wvNszfI:1pVsNO:Syo1hy2BAnD6PT3MxccIv0lMDnLshU347EEq6x4eY8o",
+        "expire_date": "2023-03-11T11:06:02.014Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "l9alrypvmtmbal34kyvpn5reybkpr18l",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hA6LYW6dO8ZyMwwSNVAUtqV8e7apAvd_vfef6mA25rD1mQJc1RnBer0uxHyQ8oO4h3LrWquZV1m0ruiD9r0tUZ5Xg737yBjy9_aWR6xp3EQAmHwnRjXG-HkiAc_WfYAyRg_RfRCdrI2AThHg2Bn2Dv1_gDp2Dfb:1pUjEp:1KEzRqWg38xjWCVe5Wiv_crhyqCJSwpnDPYw-cWcZsA",
+        "expire_date": "2023-03-08T07:08:27.288Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "szowq64vd9x676nk7silsnmjie7mcjip",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFli4AevfcbyC6wUjWQlPZk_Hdp0oNmLpN5M_MWHrc1-62lxc9RXIUVp9-MMDxT2UF8YLlXGWpZl5nkXpEHbXKqMb1uR_fvIGPLfc1pVMaAvViNAI7OZgSriVQ3yAaJ3WCtCgEMMCPqENTYlTg5hoHE5wvNszfI:1pX0nx:sSvgmLSUhFpW_5CBPmBvYrPR2WeaL5rcJ8hfpvGOgR4",
+        "expire_date": "2023-03-14T14:18:09.023Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "t4d38ji30m4ovhq2asup3onl3s7acjfq",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSE8ynRw6d5vIAMMUjU0Ke3K-O_apAvd3nPOfYlA21rD1nkJUxZnocXpd4uUHtx2kO_UbrNMc1uXKcpdkQft8jpnfl4O9--gUq_fuoBnBEde4-Ahs1WWrTajNt5iGhW4lEvxLjudkAaDiBZcBCRWoAnF-wO9BDbW:1pQtFr:xmR2sNwm-AbZIooNJrdGuXnX7Dleq0DqNuuIZMbN2HU",
+        "expire_date": "2023-02-25T17:01:39.030Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "uqk2o907lmu43322murwbbt2w2yy3b4u",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hA6LYW6dO8ZyMwwSNVAUtqV8e7apAvd_vfef6mA25rD1mQJc1RnBer0uxHyQ8oO4h3LrWquZV1m0ruiD9r0tUZ5Xg737yBjy9_aWR6xp3EQAmHwnRjXG-HkiAc_WfYAyRg_RfRCdrI2AThHg2Bn2Dv1_gDp2Dfb:1pUjGa:WZiHTxfbP-BgRkep_HUPgrPDDlW1PmRvELcvrIj59hk",
+        "expire_date": "2023-03-08T07:10:16.244Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "vpspl24nhu7237uh5nebeveuffiaaxiw",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSE8ynRw6d5vIAMMUjU0Ke3K-O_apAvd3nPOfYlA21rD1nkJUxZnocXpd4uUHtx2kO_UbrNMc1uXKcpdkQft8jpnfl4O9--gUq_fuoBnBEde4-Ahs1WWrTajNt5iGhW4lEvxLjudkAaDiBZcBCRWoAnF-wO9BDbW:1pPffn:lJ1QVFEgdaG8oEQtWkvu8QubeCnd9vmrBDKwPrwV7Do",
+        "expire_date": "2023-02-22T08:19:23.563Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "wh0xuxk7sj9f9qpukyzm0liequqbsu5c",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFli4AevfcbyC6wUjWQlPZk_Hdp0oNmLpN5M_MWHrc1-62lxc9RXIUVp9-MMDxT2UF8YLlXGWpZl5nkXpEHbXKqMb1uR_fvIGPLfc1pVMaAvViNAI7OZgSriVQ3yAaJ3WCtCgEMMCPqENTYlTg5hoHE5wvNszfI:1pXLMh:fwhRUFAxuJpKXDVI0nIwJH0DOFb8zLhHUp5lqMWFDAc",
+        "expire_date": "2023-03-15T12:15:23.731Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "zs133irt8ku6yq4yz8dsk4qoedknc7t6",
+    "fields": {
+        "session_data": ".eJxVjDsOwyAQBe9CHSGwgYWU6X0GtMsnOIlAMnYV5e6xJRdJ-2bmvZnHbS1-62nxc2RXBuzyuxGGZ6oHiA-s98ZDq-syEz8UftLOpxbT63a6fwcFe9lrHLRxghyCDFkLJMhRaBIOVFRKJI0GLIyESVscjd1F4yBZLQnkkAX7fAHcPDdU:1paEKG:YKBFL9TVBetNBjO5PoakHqs89NzPmEptwEMADTwEzjc",
+        "expire_date": "2023-03-23T11:20:48.054Z"
+    }
+},
+{
+    "model": "website.team",
+    "pk": "0ef526d0-4f9a-44d5-b5b5-2d738a7b7f18",
+    "fields": {
+        "first_name": "Martin",
+        "last_name": "Smith",
+        "designation": "Web Developer",
+        "photo": "photo/2023/02/08/avatar-10.jpg",
+        "fb_link": "http://www.facebook.com/martinsmith",
+        "tw_link": "http://www.twitter.com/martinsmith",
+        "wa_link": "http://www.wa.me/+996700239715",
+        "te_link": "http://www.t.me/+996700239715",
+        "created_date": "2023-02-08T08:31:37.030Z"
+    }
+},
+{
+    "model": "website.team",
+    "pk": "27488a6d-ccf7-4061-beb4-7a7f49e90a00",
+    "fields": {
+        "first_name": "Michele",
+        "last_name": "Nelson",
+        "designation": "Support Manager",
+        "photo": "photo/2023/02/08/avatar-11.jpg",
+        "fb_link": "http://www.facebook.com/michelenelson",
+        "tw_link": "http://www.twitter.com/michelenelson",
+        "wa_link": "http://www.wa.me/+996700239715",
+        "te_link": "http://www.t.me/+996700239715",
+        "created_date": "2023-02-08T08:35:48.827Z"
+    }
+},
+{
+    "model": "website.team",
+    "pk": "7e59ca2a-72d1-40e8-ae20-901d0cbb3aff",
+    "fields": {
+        "first_name": "Stone",
+        "last_name": "Carolyn",
+        "designation": "Creative Director",
+        "photo": "photo/2023/02/08/avatar-12.jpg",
+        "fb_link": "http://www.facebook.com/stonecarolyn",
+        "tw_link": "http://www.twitter.com/stonecarolyn",
+        "wa_link": "http://www.wa.me/+996700239715",
+        "te_link": "http://www.t.me/+996700239715",
+        "created_date": "2023-02-08T08:34:21.344Z"
+    }
+},
+{
+    "model": "website.team",
+    "pk": "d020fc93-4912-41e2-8ab2-aa09f7ced79e",
+    "fields": {
+        "first_name": "Brandon",
+        "last_name": "Miller",
+        "designation": "Manager",
+        "photo": "photo/2023/02/08/avatar-3.jpg",
+        "fb_link": "http://www.facebook.com/brandonmiller",
+        "tw_link": "http://www.twitter.com/brandonmiller",
+        "wa_link": "http://www.wa.me/+996700239715",
+        "te_link": "http://www.t.me/+996700239715",
+        "created_date": "2023-02-08T08:35:00.516Z"
+    }
+},
+{
+    "model": "cars.car",
+    "pk": "0dbfed0a-d091-4272-b9f0-404fa445df06",
+    "fields": {
+        "car_title": "Mercedes-Benz G-Class",
+        "owner": [
+            "kaidu"
+        ],
+        "state": "JA",
+        "city": "Toktogul",
+        "color": "Black",
+        "model": "Mercedes-Benz",
+        "year": 2023,
+        "condition": "New",
+        "price": 100000,
+        "description": "<p>There are plenty of ways to get dirty, but the Mercedes-Benz G-class is truly the fanciest way to crawl through the muck. Built like a champagne-sipping&nbsp;<a href=\"https://www.caranddriver.com/ford/bronco\">Ford Bronco</a>&nbsp;or&nbsp;<a href=\"https://www.caranddriver.com/jeep/wrangler\">Jeep Wrangler</a>, the Gel&auml;ndewagen has a lavish interior with massaging seats and a six-figure starting price to match. Every G550 is powered by a 416-hp twin-turbo V-8 with a nine-speed automatic transmission. Four-wheel drive is standard. For more power, there&#39;s the&nbsp;<a href=\"https://caranddriver.com/mercedes-amg/g63\">577-hp AMG-badged G63,</a>&nbsp;reviewed separately. The G Wagen is capable of wilder adventures than its occupants would likely volunteer for. Its 9.5 inches of ground clearance and three locking differentials make it feel as if it&#39;s unable to ever get stuck. Its boxy shape results in a spacious cabin with plenty of legroom for every passenger, but at the cost of highway fuel economy. That said, the cost of fuel isn&#39;t likely to burden the likes of the Kardashians, Sylvester Stallone, or other Hollywood stars often found behind the wheel of this elite off-roader.</p>",
+        "car_main_photo": "photos/cars/2023/02/18/m1.jpg",
+        "features": "Cruise Control,Audio Interface,Airbags,Seat Heating,Parking Assist,Wind Deflector,Bluetooth Handset,ABS,Luke",
+        "body_style": "Jeep",
+        "engine": "W8",
+        "transmission": "Variator",
+        "interior": "Cool",
+        "kilometers": 22,
+        "doors": "5",
+        "passengers": 5,
+        "vin_no": "4000000001234",
+        "fuel_type": "Petrol",
+        "no_of_owners": 0,
+        "fuel_mileage": "20",
+        "is_featured": true,
+        "created_date": "2023-02-18T09:25:57.534Z"
+    }
+},
+{
+    "model": "cars.car",
+    "pk": "1cdae37b-97db-4937-b25e-9f7deeb316a1",
+    "fields": {
+        "car_title": "Honda Civic",
+        "owner": null,
+        "state": "IK",
+        "city": "Cholpon-Ata",
+        "color": "Blue",
+        "model": "Honda",
+        "year": 2020,
+        "condition": "Old",
+        "price": 30000,
+        "description": "<p>The&nbsp;<strong>Honda Civic</strong>&nbsp;(<a href=\"https://en.wikipedia.org/wiki/Japanese_language\" title=\"Japanese language\">Japanese</a>:&nbsp;ホンダ・シビック,&nbsp;<a href=\"https://en.wikipedia.org/wiki/Hepburn_romanization\" title=\"Hepburn romanization\">Hepburn</a>:&nbsp;<em>Honda Shibikku</em>)&nbsp;is a series of&nbsp;<a href=\"https://en.wikipedia.org/wiki/Automobile\" title=\"Automobile\">automobiles</a>&nbsp;manufactured by&nbsp;<a href=\"https://en.wikipedia.org/wiki/Honda\" title=\"Honda\">Honda</a>&nbsp;since 1972. Since 2000, the Civic has been categorized as a&nbsp;<a href=\"https://en.wikipedia.org/wiki/Compact_car\" title=\"Compact car\">compact car</a>, while previously it occupied the&nbsp;<a href=\"https://en.wikipedia.org/wiki/Subcompact_car\" title=\"Subcompact car\">subcompact</a>&nbsp;class. As of 2021, the Civic is positioned between the&nbsp;<a href=\"https://en.wikipedia.org/wiki/Honda_Fit\" title=\"Honda Fit\">Honda Fit</a>/<a href=\"https://en.wikipedia.org/wiki/Honda_City\" title=\"Honda City\">City</a>&nbsp;and&nbsp;<a href=\"https://en.wikipedia.org/wiki/Honda_Accord\" title=\"Honda Accord\">Honda Accord</a>&nbsp;in Honda&#39;s global car line-up.</p>\r\n\r\n<p>The first-generation Civic was introduced in July 1972 as a two-door coupe model,<sup><a href=\"https://en.wikipedia.org/wiki/Honda_Civic#cite_note-3\">[2]</a></sup>&nbsp;followed by a three-door hatchback that September. With a 1,169&nbsp;cc&nbsp;<a href=\"https://en.wikipedia.org/wiki/Transverse_engine\" title=\"Transverse engine\">transverse engine</a>&nbsp;and&nbsp;<a href=\"https://en.wikipedia.org/wiki/Front-wheel_drive\" title=\"Front-wheel drive\">front-wheel drive</a>&nbsp;like the British&nbsp;<a href=\"https://en.wikipedia.org/wiki/Mini\" title=\"Mini\">Mini</a>, the car provided good interior space despite overall small dimensions.<sup><a href=\"https://en.wikipedia.org/wiki/Honda_Civic#cite_note-multiple-4\">[3]</a></sup>&nbsp;Initially gaining a reputation for being fuel-efficient, reliable and environmentally friendly, later iterations have become known for performance and sportiness, especially the&nbsp;<a href=\"https://en.wikipedia.org/wiki/Honda_Civic_Type_R\" title=\"Honda Civic Type R\">Civic Type R</a>, Civic VTi, Civic GTi and&nbsp;<a href=\"https://en.wikipedia.org/wiki/Honda_Civic_Si\" title=\"Honda Civic Si\">Civic SiR/Si</a>.<sup><a href=\"https://en.wikipedia.org/wiki/Honda_Civic#cite_note-5\">[4]</a></sup><sup><a href=\"https://en.wikipedia.org/wiki/Honda_Civic#cite_note-6\">[5]</a></sup></p>\r\n\r\n<p>The Civic has been repeatedly&nbsp;<a href=\"https://en.wikipedia.org/wiki/Rebadging\" title=\"Rebadging\">rebadged</a>&nbsp;for international markets, and served as the basis for the&nbsp;<a href=\"https://en.wikipedia.org/wiki/Honda_CR-X\" title=\"Honda CR-X\">Honda CR-X</a>, the&nbsp;<a href=\"https://en.wikipedia.org/wiki/Honda_CR-X_del_Sol\" title=\"Honda CR-X del Sol\">Honda CR-X del Sol</a>, the&nbsp;<a href=\"https://en.wikipedia.org/wiki/Honda_Concerto\" title=\"Honda Concerto\">Concerto</a>, the first generation&nbsp;<a href=\"https://en.wikipedia.org/wiki/Honda_Prelude\" title=\"Honda Prelude\">Prelude</a>, the Civic Shuttle (later to become the&nbsp;<a href=\"https://en.wikipedia.org/wiki/Honda_Orthia\" title=\"Honda Orthia\">Orthia</a>) and the&nbsp;<a href=\"https://en.wikipedia.org/wiki/Honda_CR-V\" title=\"Honda CR-V\">CR-V</a>&nbsp;(which, by extension, was used as the basis for the&nbsp;<a href=\"https://en.wikipedia.org/wiki/Honda_FR-V\" title=\"Honda FR-V\">Honda FR-V</a>).<sup><a href=\"https://en.wikipedia.org/wiki/Honda_Civic#cite_note-7\">[6]</a></sup></p>\r\n\r\n<p>The Civic is one of the all-time best-selling automobiles in the world, with over 27 million units sold since 1972 as of 2021.<sup><a href=\"https://en.wikipedia.org/wiki/Honda_Civic#cite_note-8\">[7]</a></sup><sup><a href=\"https://en.wikipedia.org/wiki/Honda_Civic#cite_note-9\">[8]</a></sup></p>",
+        "car_main_photo": "photos/cars/2023/02/18/c1.jpg",
+        "features": "Parking Assist,Video Camera,Auto Start/Stop,Wind Deflector,Bluetooth Handset,Auto Pilot,ABS",
+        "body_style": "hatchback",
+        "engine": "W4",
+        "transmission": "Auto",
+        "interior": "Cool",
+        "kilometers": 22000,
+        "doors": "4",
+        "passengers": 3,
+        "vin_no": "400000000231",
+        "fuel_type": "Petrol",
+        "no_of_owners": 2,
+        "fuel_mileage": "5",
+        "is_featured": true,
+        "created_date": "2023-02-18T09:51:33.547Z"
+    }
+},
+{
+    "model": "cars.car",
+    "pk": "278c1187-2319-4c47-a431-a27dc7f627ea",
+    "fields": {
+        "car_title": "Volkswagen Golf",
+        "owner": null,
+        "state": "BN",
+        "city": "Kadamjay",
+        "color": "Red",
+        "model": "Volkswagen",
+        "year": 2018,
+        "condition": "Old",
+        "price": 10000,
+        "description": "<p>The&nbsp;<strong>Volkswagen Golf</strong>&nbsp;(<a href=\"https://en.wikipedia.org/wiki/File:GT_VW-Golf.ogg\" title=\"About this sound\"><img alt=\"\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Loudspeaker.svg/11px-Loudspeaker.svg.png\" style=\"height:11px; width:11px\" /></a><a href=\"https://upload.wikimedia.org/wikipedia/commons/8/8e/GT_VW-Golf.ogg\" title=\"GT VW-Golf.ogg\">listen</a>&nbsp;<small>(<a href=\"https://en.wikipedia.org/wiki/Wikipedia:Media_help\" title=\"Wikipedia:Media help\">help</a>&middot;<a href=\"https://en.wikipedia.org/wiki/File:GT_VW-Golf.ogg\" title=\"File:GT VW-Golf.ogg\">info</a>)</small>) is a&nbsp;<a href=\"https://en.wikipedia.org/wiki/Compact_car\" title=\"Compact car\">compact car</a>/<a href=\"https://en.wikipedia.org/wiki/Small_family_car\" title=\"Small family car\">small family car</a>&nbsp;(<a href=\"https://en.wikipedia.org/wiki/C-segment\" title=\"C-segment\">C-segment</a>) produced by the German automotive manufacturer&nbsp;<a href=\"https://en.wikipedia.org/wiki/Volkswagen\" title=\"Volkswagen\">Volkswagen</a>&nbsp;since 1974, marketed worldwide across eight generations, in various body configurations and under various&nbsp;<a href=\"https://en.wikipedia.org/wiki/Nameplate\" title=\"Nameplate\">nameplates</a>&nbsp;&ndash; including as the&nbsp;<strong>Volkswagen Rabbit</strong>&nbsp;in the United States and Canada (Mk1 and Mk5), and as the&nbsp;<strong>Volkswagen Caribe</strong><sup><a href=\"https://en.wikipedia.org/wiki/Volkswagen_Golf#cite_note-1\">[1]</a></sup>&nbsp;in Mexico (Mk1).</p>\r\n\r\n<p>The original Golf Mk1 was a front-engined,&nbsp;<a href=\"https://en.wikipedia.org/wiki/Front-wheel_drive\" title=\"Front-wheel drive\">front-wheel drive</a>&nbsp;replacement for the&nbsp;<a href=\"https://en.wikipedia.org/wiki/Air-cooled\" title=\"Air-cooled\">air-cooled</a>, rear-engined, rear-wheel drive&nbsp;<a href=\"https://en.wikipedia.org/wiki/Volkswagen_Beetle\" title=\"Volkswagen Beetle\">Volkswagen Beetle</a>. Historically, the Golf is Volkswagen&#39;s best-selling model and is among the&nbsp;<a href=\"https://en.wikipedia.org/wiki/List_of_automobile_sales_by_model\" title=\"List of automobile sales by model\">world&#39;s top three best-selling models</a>, with more than 35 million units sold as of 2019.<sup><a href=\"https://en.wikipedia.org/wiki/Volkswagen_Golf#cite_note-VWG30mi-2\">[2]</a></sup><sup><a href=\"https://en.wikipedia.org/wiki/Volkswagen_Golf#cite_note-carmagazine.co.uk-3\">[3]</a></sup><sup><a href=\"https://en.wikipedia.org/wiki/Volkswagen_Golf#cite_note-4\">[4]</a></sup></p>\r\n\r\n<p>Initially, most Golfs were 3-door&nbsp;<a href=\"https://en.wikipedia.org/wiki/Hatchback\" title=\"Hatchback\">hatchbacks</a>.<sup><a href=\"https://en.wikipedia.org/wiki/Volkswagen_Golf#cite_note-5\">[5]</a></sup>&nbsp;Other variants include a 5-door hatchback,&nbsp;<a href=\"https://en.wikipedia.org/wiki/Station_wagon\" title=\"Station wagon\">estate</a>&nbsp;(Variant, from 1993),&nbsp;<a href=\"https://en.wikipedia.org/wiki/Convertible\" title=\"Convertible\">convertible</a>&nbsp;(<a href=\"https://en.wikipedia.org/wiki/Volkswagen_Golf_Mk1#Golf_Cabriolet\" title=\"Volkswagen Golf Mk1\">Cabriolet</a>&nbsp;and&nbsp;<a href=\"https://en.wikipedia.org/wiki/Volkswagen_Golf_Mk3#Cabriolet\" title=\"Volkswagen Golf Mk3\">Cabrio</a>, 1979&ndash;2002,&nbsp;<a href=\"https://en.wikipedia.org/wiki/Volkswagen_Golf_Mk6#Cabriolet\" title=\"Volkswagen Golf Mk6\">Cabriolet</a>, 2011&ndash;present), and a Golf-based&nbsp;<a href=\"https://en.wikipedia.org/wiki/Saloon_car\" title=\"Saloon car\">saloon</a>, called the&nbsp;<a href=\"https://en.wikipedia.org/wiki/Volkswagen_Jetta\" title=\"Volkswagen Jetta\">Volkswagen Jetta</a>,&nbsp;<a href=\"https://en.wikipedia.org/wiki/Volkswagen_Vento\" title=\"Volkswagen Vento\">Volkswagen Vento</a>&nbsp;(from 1992) or&nbsp;<a href=\"https://en.wikipedia.org/wiki/Volkswagen_Bora\" title=\"Volkswagen Bora\">Volkswagen Bora</a>&nbsp;(from 1999). The Golf has crossed from economy to high-performance market segments.</p>\r\n\r\n<p>The Golf has won awards, including the&nbsp;<a href=\"https://en.wikipedia.org/wiki/World_Car_of_the_Year\" title=\"World Car of the Year\">World Car of the Year</a>&nbsp;in 2009, with the&nbsp;<a href=\"https://en.wikipedia.org/wiki/Volkswagen_Golf_Mk6\" title=\"Volkswagen Golf Mk6\">Volkswagen Golf Mk6</a>&nbsp;and in 2013 with the&nbsp;<a href=\"https://en.wikipedia.org/wiki/Volkswagen_Golf_Mk7\" title=\"Volkswagen Golf Mk7\">Volkswagen Golf Mk7</a>. Along with the&nbsp;<a href=\"https://en.wikipedia.org/wiki/Renault_Clio\" title=\"Renault Clio\">Renault Clio</a>&nbsp;and the Vauxhall Astra, the Golf is one of only three cars who had won European Car of the Year twice, in 1992 and 2013.<sup><a href=\"https://en.wikipedia.org/wiki/Volkswagen_Golf#cite_note-6\">[6]</a></sup><sup><a href=\"https://en.wikipedia.org/wiki/Volkswagen_Golf#cite_note-coty-7\">[7]</a></sup>&nbsp;The Volkswagen Golf has made the annual&nbsp;<a href=\"https://en.wikipedia.org/wiki/Car_and_Driver_10Best\" title=\"Car and Driver 10Best\">Car and Driver 10Best</a>&nbsp;list multiple times. The&nbsp;<a href=\"https://en.wikipedia.org/wiki/Volkswagen_Golf_Mk7\" title=\"Volkswagen Golf Mk7\">Golf Mk7</a>&nbsp;won the&nbsp;<a href=\"https://en.wikipedia.org/wiki/Motor_Trend_Car_of_the_Year\" title=\"Motor Trend Car of the Year\">Motor Trend Car of the Year</a>&nbsp;award in 2015, and the&nbsp;<a href=\"https://en.wikipedia.org/wiki/Volkswagen_Golf_Mk1\" title=\"Volkswagen Golf Mk1\">Mk1</a>&nbsp;GTI also won the award in 1985. The&nbsp;<a href=\"https://en.wikipedia.org/wiki/Volkswagen_Golf_Mk4\" title=\"Volkswagen Golf Mk4\">Golf Mk4</a>&nbsp;won for the best-selling car in Europe in 2001.</p>",
+        "car_main_photo": "photos/cars/2023/02/18/v1.jpg",
+        "features": "Cruise Control,Airbags,Video Camera,Auto Start/Stop,Wind Deflector,Bluetooth Handset,Luke",
+        "body_style": "Universal",
+        "engine": "W4",
+        "transmission": "Auto",
+        "interior": "Cool",
+        "kilometers": 34000,
+        "doors": "4",
+        "passengers": 4,
+        "vin_no": "1231241244325234",
+        "fuel_type": "Gas",
+        "no_of_owners": 3,
+        "fuel_mileage": "10",
+        "is_featured": true,
+        "created_date": "2023-02-18T09:59:13.134Z"
+    }
+},
+{
+    "model": "cars.car",
+    "pk": "3fa992de-9128-40e1-90cc-e664297ab6dc",
+    "fields": {
+        "car_title": "BMW I7",
+        "owner": [
+            "kaidu"
+        ],
+        "state": "FRU",
+        "city": "Bishkek",
+        "color": "Grey",
+        "model": "BMW",
+        "year": 2015,
+        "condition": "Old",
+        "price": 20000,
+        "description": "<p>The BMW 7 Series is a full-size luxury sedan manufactured and marketed by the German automaker BMW since 1977.[1] It is the successor to the BMW E3 &quot;New Six&quot; sedan and is now in its seventh generation. The 7 Series is BMW&#39;s flagship car and is only available in a sedan bodystyle (including long wheelbase and limousine models). It traditionally introduces technologies and exterior design themes before other models in BMW&#39;s lineup.[2] The first generation of the 7 Series was powered by straight-6 petrol engines, and following generations have been powered by inline-4, straight-6, V8 and V12 engines with both natural aspiration and turbocharging. Since 1995, diesel engines have been optional in the 7 Series. Unlike the 3 Series and 5 Series sedans, BMW has offered a nonpureblood M variant, the BMW M760 6.6L V12 (at the time the most powerful BMW ever made, not to be confused with BMW 760 6.6 V12 which does not offer the same performance). The Alpina B7 (G12) serves as one of the high-performance variants of the 7 Series.</p>",
+        "car_main_photo": "photos/cars/2023/02/09/Без_названия_1.jpeg",
+        "features": "Cruise Control,Audio Interface,Airbags,Seat Heating,Alarm System,Parking Assist,Bluetooth Handset,Auto Pilot,ABS,Luke",
+        "body_style": "sedan",
+        "engine": "W4",
+        "transmission": "Auto",
+        "interior": "Cool",
+        "kilometers": 13000,
+        "doors": "4",
+        "passengers": 4,
+        "vin_no": "3123121233123123",
+        "fuel_type": "Gas",
+        "no_of_owners": 1,
+        "fuel_mileage": "12",
+        "is_featured": true,
+        "created_date": "2023-02-09T08:44:43.859Z"
+    }
+},
+{
+    "model": "cars.car",
+    "pk": "6786cb04-b11e-4d13-b7df-44bde8b8aa0b",
+    "fields": {
+        "car_title": "Toyota Prius",
+        "owner": null,
+        "state": "NN",
+        "city": "Kochkor",
+        "color": "Black",
+        "model": "Toyota",
+        "year": 2017,
+        "condition": "Old",
+        "price": 15000,
+        "description": "<p>The&nbsp;<strong>Toyota Prius</strong>&nbsp;(<a href=\"https://en.wikipedia.org/wiki/Help:IPA/English\" title=\"Help:IPA/English\">/ˈpriːəs/</a>)&nbsp;(<a href=\"https://en.wikipedia.org/wiki/Japanese_language\" title=\"Japanese language\">Japanese</a>:&nbsp;トヨタ・プリウス,&nbsp;<a href=\"https://en.wikipedia.org/wiki/Hepburn_romanization\" title=\"Hepburn romanization\">Hepburn</a>:&nbsp;<em>Toyota Puriusu</em>)&nbsp;is a car built by&nbsp;<a href=\"https://en.wikipedia.org/wiki/Toyota\" title=\"Toyota\">Toyota</a>&nbsp;which has a&nbsp;<a href=\"https://en.wikipedia.org/wiki/Hybrid_vehicle_drivetrain\" title=\"Hybrid vehicle drivetrain\">hybrid drivetrain</a>, combining an&nbsp;<a href=\"https://en.wikipedia.org/wiki/Internal_combustion_engine\" title=\"Internal combustion engine\">internal combustion engine</a>&nbsp;with an&nbsp;<a href=\"https://en.wikipedia.org/wiki/Electric_motor\" title=\"Electric motor\">electric motor</a>. Initially offered as a four-door&nbsp;<a href=\"https://en.wikipedia.org/wiki/Sedan_(automobile)\" title=\"Sedan (automobile)\">sedan</a>, it has been produced only as a five-door&nbsp;<a href=\"https://en.wikipedia.org/wiki/Liftback\" title=\"Liftback\">liftback</a>&nbsp;since 2003.</p>\r\n\r\n<p>In 2007, the&nbsp;<a href=\"https://en.wikipedia.org/wiki/United_States_Environmental_Protection_Agency\" title=\"United States Environmental Protection Agency\">United States Environmental Protection Agency</a>&nbsp;(EPA) and&nbsp;<a href=\"https://en.wikipedia.org/wiki/California_Air_Resources_Board\" title=\"California Air Resources Board\">California Air Resources Board</a>&nbsp;(CARB) rated the Prius as among the cleanest vehicles sold in the United States on the basis of smog-forming emissions.<sup><a href=\"https://en.wikipedia.org/wiki/Toyota_Prius#cite_note-3\">[3]</a></sup>&nbsp;The 2018&nbsp;<a href=\"https://en.wikipedia.org/wiki/Model_year\" title=\"Model year\">model year</a>&nbsp;Prius Eco ranked as the second-most-fuel-efficient gasoline-powered car without&nbsp;<a href=\"https://en.wikipedia.org/wiki/Plug-in_electric_vehicle\" title=\"Plug-in electric vehicle\">plug-in capability</a>&nbsp;available in the US that year, following the&nbsp;<a href=\"https://en.wikipedia.org/wiki/Hyundai_Ioniq\" title=\"Hyundai Ioniq\">Hyundai Ioniq Blue</a>&nbsp;hybrid.<sup><a href=\"https://en.wikipedia.org/wiki/Toyota_Prius#cite_note-2016PriusEcoTop-4\">[4]</a></sup><sup><a href=\"https://en.wikipedia.org/wiki/Toyota_Prius#cite_note-EPAtop10_for_2018-5\">[5]</a></sup></p>\r\n\r\n<p>The Prius first went on sale in Japan in 1997, and was available at&nbsp;<a href=\"https://en.wikipedia.org/wiki/Toyota_dealerships_(Japan)\" title=\"Toyota dealerships (Japan)\">all four Toyota Japan dealership chains</a>, making it the first mass-produced hybrid vehicle.<sup><a href=\"https://en.wikipedia.org/wiki/Toyota_Prius#cite_note-6\">[6]</a></sup>&nbsp;It was subsequently introduced worldwide in 2000.<sup><a href=\"https://en.wikipedia.org/wiki/Toyota_Prius#cite_note-TMC4mi-7\">[7]</a></sup>&nbsp;Toyota sells the Prius in over 90 markets, with Japan and the United States being its largest markets.<sup><a href=\"https://en.wikipedia.org/wiki/Toyota_Prius#cite_note-TMC9miHEVs-8\">[8]</a></sup>&nbsp;Global cumulative Prius&nbsp;<a href=\"https://en.wikipedia.org/wiki/Liftback\" title=\"Liftback\">liftback</a>&nbsp;sales reached the milestone 1&nbsp;million vehicle mark in May 2008,<sup><a href=\"https://en.wikipedia.org/wiki/Toyota_Prius#cite_note-Toyota0909-9\">[9]</a></sup>&nbsp;2&nbsp;million in September 2010,<sup><a href=\"https://en.wikipedia.org/wiki/Toyota_Prius#cite_note-GCC100710-10\">[10]</a></sup>&nbsp;and passed the 3&nbsp;million mark in June 2013.<sup><a href=\"https://en.wikipedia.org/wiki/Toyota_Prius#cite_note-Prius3mi-11\">[11]</a></sup>&nbsp;Cumulative sales of one million were achieved in the U.S. by early April 2011,<sup><a href=\"https://en.wikipedia.org/wiki/Toyota_Prius#cite_note-US1million-12\">[12]</a></sup>&nbsp;and Japan reached the 1&nbsp;million mark in August 2011.<sup><a href=\"https://en.wikipedia.org/wiki/Toyota_Prius#cite_note-JP1million-13\">[13]</a></sup>&nbsp;As of September&nbsp;2022, the Prius ranked as the world&#39;s top selling hybrid car with 5&nbsp;million units sold.<sup><a href=\"https://en.wikipedia.org/wiki/Toyota_Prius#cite_note-Prius2023-14\">[14]</a></sup></p>",
+        "car_main_photo": "photos/cars/2023/02/18/pr1.jpg",
+        "features": "Cruise Control,Airbags,Parking Assist,Bluetooth Handset,Auto Pilot,ABS,Luke",
+        "body_style": "hatchback",
+        "engine": "W4",
+        "transmission": "Auto",
+        "interior": "Cool",
+        "kilometers": 20000,
+        "doors": "4",
+        "passengers": 4,
+        "vin_no": "2314214324552351",
+        "fuel_type": "Hybrid",
+        "no_of_owners": 2,
+        "fuel_mileage": "7",
+        "is_featured": true,
+        "created_date": "2023-02-18T09:19:56.911Z"
+    }
+},
+{
+    "model": "cars.car",
+    "pk": "d9a14258-9204-4d73-ba97-fd3350f54873",
+    "fields": {
+        "car_title": "Toyota Land Cruiser 300 2019",
+        "owner": [
+            "admin"
+        ],
+        "state": "OSH",
+        "city": "Osh",
+        "color": "White",
+        "model": "Land Cruiser",
+        "year": 2022,
+        "condition": "New",
+        "price": 120000,
+        "description": "<p style=\"text-align:justify\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Toyota Land Cruiser (Japanese: トヨタ・ランドクルーザー, Hepburn: Toyota Rando-Kurūzā) (also sometimes spelled as LandCruiser)[1] is a series of four-wheel drive vehicles produced by the Japanese automobile manufacturer Toyota. It is Toyota&#39;s longest running series of models.[2] As of 2019, the sales of the Land Cruiser totalled more than 10 million units worldwide.[3] Production of the first generation of the Land Cruiser began in 1951.[3][4][5] The Land Cruiser has been produced in convertible, hardtop, station wagon and cab chassis body styles. The Land Cruiser&#39;s reliability and longevity have led to huge popularity, especially in Australia, where it is the best-selling body-on-frame, four-wheel drive vehicle.[6] Toyota also extensively tests the Land Cruiser in the Australian outback &ndash; considered to be one of the toughest operating environments in both temperature and terrain.[7][8][9] In Japan, the Land Cruiser was once exclusive to Toyota Japanese dealerships called Toyota Store. As of 2021, the full-size Land Cruiser was available in many markets. Exceptions include the United States and Canada (since 2021),[10] Malaysia (which receives the Lexus LX instead), Hong Kong, Macau, Singapore, South Korea, Brazil, and most of Europe. In Europe, the only countries where the full-size Land Cruiser is officially sold are Gibraltar, Moldova, Russia, Belarus and Ukraine. The Land Cruiser is hugely popular in the Middle East, Russia, and Australia, and also in Africa where it is used by farmers, NGO&#39;s, UN and humanitarian organizations, by national armies (often the pickup version) as well as by irregular armed groups who turn them into &#39;technicals&#39; by mounting machine guns in the rear. In August 2019, Toyota Land Cruiser cumulative global sales surpassed 10 million units.[11]</p>",
+        "car_main_photo": "photos/cars/2023/02/09/2021_Toyota_Land_Cruiser_300_3.4_ZX_Colombia_front_view_04.png",
+        "features": "Cruise Control,Audio Interface,Airbags,Seat Heating,Parking Assist,Video Camera,Auto Start/Stop,Wind Deflector,Auto Pilot,ABS,Luke",
+        "body_style": "Jeep",
+        "engine": "W8",
+        "transmission": "Auto",
+        "interior": "Cool",
+        "kilometers": 0,
+        "doors": "5",
+        "passengers": 7,
+        "vin_no": "123123123123123",
+        "fuel_type": "Petrol",
+        "no_of_owners": 1,
+        "fuel_mileage": "15",
+        "is_featured": true,
+        "created_date": "2023-02-09T07:59:48.817Z"
+    }
+},
+{
+    "model": "cars.car",
+    "pk": "da6344cc-a78e-45b3-a0fe-9b448e2abab0",
+    "fields": {
+        "car_title": "Audi Q7",
+        "owner": [
+            "almaza"
+        ],
+        "state": "JA",
+        "city": "Mailuu-Suu",
+        "color": "Green",
+        "model": "Audi",
+        "year": 2021,
+        "condition": "New",
+        "price": 20000,
+        "description": "<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;Audi Q7</strong>&nbsp;&mdash; среднеразмерный&nbsp;<a href=\"https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D0%BE%D1%81%D1%81%D0%BE%D0%B2%D0%B5%D1%80_(%D1%82%D0%B8%D0%BF_%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8F)\" title=\"Кроссовер (тип автомобиля)\">кроссовер</a>, выпускаемый компанией&nbsp;<a href=\"https://ru.wikipedia.org/wiki/Audi\" title=\"Audi\">Audi</a>. Его премьера состоялась в сентябре 2005 года на&nbsp;<a href=\"https://ru.wikipedia.org/wiki/%D0%A4%D1%80%D0%B0%D0%BD%D0%BA%D1%84%D1%83%D1%80%D1%82%D1%81%D0%BA%D0%B8%D0%B9_%D0%B0%D0%B2%D1%82%D0%BE%D1%81%D0%B0%D0%BB%D0%BE%D0%BD\" title=\"Франкфуртский автосалон\">Международном автосалоне во Франкфурте</a><sup><a href=\"https://ru.wikipedia.org/wiki/Audi_Q7#cite_note-1\">[1]</a></sup>. Audi Q7 базируется на концепте Audi Pikes Peak quattro, представленном в 2003 году на автосалоне в Детройте<sup><a href=\"https://ru.wikipedia.org/wiki/Audi_Q7#cite_note-2\">[2]</a></sup>. Audi Q7 создан на платформе &quot;E&quot;. Вместе с ним на заводе&nbsp;<a href=\"https://ru.wikipedia.org/wiki/Volkswagen\" title=\"Volkswagen\">Volkswagen</a>&nbsp;Slovakia в Братиславе (Словакия) на этой же платформе выпускаются модели концерна Volkswagen &mdash;&nbsp;<a href=\"https://ru.wikipedia.org/wiki/Volkswagen_Touareg\" title=\"Volkswagen Touareg\">Touareg</a>&nbsp;и&nbsp;<a href=\"https://ru.wikipedia.org/wiki/Porsche_Cayenne\" title=\"Porsche Cayenne\">Porsche Cayenne</a><sup><a href=\"https://ru.wikipedia.org/wiki/Audi_Q7#cite_note-3\">[3]</a></sup>.</p>",
+        "car_main_photo": "photos/cars/2023/03/02/q7_iP9Ne2L.jpg",
+        "features": "Airbags,Alarm System,Video Camera,Bluetooth Handset,ABS",
+        "body_style": "Crossover",
+        "engine": "W8",
+        "transmission": "Mechanic",
+        "interior": "Cool",
+        "kilometers": 299900,
+        "doors": "5",
+        "passengers": 7,
+        "vin_no": "1231241244325234",
+        "fuel_type": "Gas",
+        "no_of_owners": 2,
+        "fuel_mileage": "12",
+        "is_featured": true,
+        "created_date": "2023-03-02T11:44:22.812Z"
+    }
+},
+{
+    "model": "cars.carphoto",
+    "pk": "0abee307-0929-4009-a752-e98edc6652b6",
+    "fields": {
+        "car_photo": "3fa992de-9128-40e1-90cc-e664297ab6dc",
+        "image": "photos/cars/car_photos/2023/02/09/foto-i7-xDrive60_04.jpg"
+    }
+},
+{
+    "model": "cars.carphoto",
+    "pk": "1126f74f-b8b8-4473-8890-eee764ce23a4",
+    "fields": {
+        "car_photo": "da6344cc-a78e-45b3-a0fe-9b448e2abab0",
+        "image": "photos/cars/car_photos/2023/03/02/q7-1.jpg"
+    }
+},
+{
+    "model": "cars.carphoto",
+    "pk": "22b036c6-a655-4502-b211-973361e1ca39",
+    "fields": {
+        "car_photo": "278c1187-2319-4c47-a431-a27dc7f627ea",
+        "image": "photos/cars/car_photos/2023/02/18/v3.jpg"
+    }
+},
+{
+    "model": "cars.carphoto",
+    "pk": "276d9b87-349a-4fc3-a5f4-f9ee2fdac6bc",
+    "fields": {
+        "car_photo": "278c1187-2319-4c47-a431-a27dc7f627ea",
+        "image": "photos/cars/car_photos/2023/02/18/v4.jpg"
+    }
+},
+{
+    "model": "cars.carphoto",
+    "pk": "2b5ea18b-3cbc-44fa-8f5c-5fa3c30307cd",
+    "fields": {
+        "car_photo": "d9a14258-9204-4d73-ba97-fd3350f54873",
+        "image": "photos/cars/car_photos/2023/02/09/LandCruiser1jpeg-1631941134.jpg"
+    }
+},
+{
+    "model": "cars.carphoto",
+    "pk": "2e0dd94a-07bf-4509-8636-f77fe00af01e",
+    "fields": {
+        "car_photo": "0dbfed0a-d091-4272-b9f0-404fa445df06",
+        "image": "photos/cars/car_photos/2023/02/18/m4.jpg"
+    }
+},
+{
+    "model": "cars.carphoto",
+    "pk": "35f002a8-b6bf-41f5-984b-703364ecfac6",
+    "fields": {
+        "car_photo": "d9a14258-9204-4d73-ba97-fd3350f54873",
+        "image": "photos/cars/car_photos/2023/02/09/2021_Toyota_Land_Cruiser_300_Russia_front_view.jpg"
+    }
+},
+{
+    "model": "cars.carphoto",
+    "pk": "55158cd5-b36f-4c56-ac2d-e4b9892d0612",
+    "fields": {
+        "car_photo": "6786cb04-b11e-4d13-b7df-44bde8b8aa0b",
+        "image": "photos/cars/car_photos/2023/02/18/p3.jpg"
+    }
+},
+{
+    "model": "cars.carphoto",
+    "pk": "91bbe7ff-6124-405f-ad34-786f7ea0eecb",
+    "fields": {
+        "car_photo": "d9a14258-9204-4d73-ba97-fd3350f54873",
+        "image": "photos/cars/car_photos/2023/02/09/land-cruiser-lc-300-3.jpeg"
+    }
+},
+{
+    "model": "cars.carphoto",
+    "pk": "97948fc9-1100-4f48-9f5c-84d091268ad9",
+    "fields": {
+        "car_photo": "1cdae37b-97db-4937-b25e-9f7deeb316a1",
+        "image": "photos/cars/car_photos/2023/02/18/c2.jpeg"
+    }
+},
+{
+    "model": "cars.carphoto",
+    "pk": "ac6e63e4-d095-44dc-8929-b3ca6646af03",
+    "fields": {
+        "car_photo": "278c1187-2319-4c47-a431-a27dc7f627ea",
+        "image": "photos/cars/car_photos/2023/02/18/v2.jpg"
+    }
+},
+{
+    "model": "cars.carphoto",
+    "pk": "b7945aa5-b8c9-415a-9b0d-1bfba4d9c881",
+    "fields": {
+        "car_photo": "0dbfed0a-d091-4272-b9f0-404fa445df06",
+        "image": "photos/cars/car_photos/2023/02/18/m3.jpg"
+    }
+},
+{
+    "model": "cars.carphoto",
+    "pk": "b9688073-5a88-4470-bcbf-6b9482db914e",
+    "fields": {
+        "car_photo": "0dbfed0a-d091-4272-b9f0-404fa445df06",
+        "image": "photos/cars/car_photos/2023/02/18/m2.jpg"
+    }
+},
+{
+    "model": "cars.carphoto",
+    "pk": "bc6ccd9c-6d45-40f0-9ad7-4f1afb819466",
+    "fields": {
+        "car_photo": "6786cb04-b11e-4d13-b7df-44bde8b8aa0b",
+        "image": "photos/cars/car_photos/2023/02/18/p4.jpeg"
+    }
+},
+{
+    "model": "cars.carphoto",
+    "pk": "cbc8d406-0d33-442f-964e-c7de89480773",
+    "fields": {
+        "car_photo": "3fa992de-9128-40e1-90cc-e664297ab6dc",
+        "image": "photos/cars/car_photos/2023/02/09/cattouchret.webp"
+    }
+},
+{
+    "model": "cars.carphoto",
+    "pk": "d00e8384-ea85-447d-a579-c7edc9542732",
+    "fields": {
+        "car_photo": "3fa992de-9128-40e1-90cc-e664297ab6dc",
+        "image": "photos/cars/car_photos/2023/02/09/Без_названия_2.jpeg"
+    }
+},
+{
+    "model": "cars.carphoto",
+    "pk": "d15fa9f4-cb24-4fdd-af80-a5862f3ff0ed",
+    "fields": {
+        "car_photo": "6786cb04-b11e-4d13-b7df-44bde8b8aa0b",
+        "image": "photos/cars/car_photos/2023/02/18/p2.jpg"
+    }
+},
+{
+    "model": "cars.carphoto",
+    "pk": "dc79c6d8-fe7b-4fc9-877c-adfc08aa3f74",
+    "fields": {
+        "car_photo": "1cdae37b-97db-4937-b25e-9f7deeb316a1",
+        "image": "photos/cars/car_photos/2023/02/18/с3.jpg"
+    }
+},
+{
+    "model": "cars.carphoto",
+    "pk": "f1bcf7ad-6f89-41e1-9386-0bebf905fbb0",
+    "fields": {
+        "car_photo": "1cdae37b-97db-4937-b25e-9f7deeb316a1",
+        "image": "photos/cars/car_photos/2023/02/18/с4.jpeg"
+    }
+},
+{
+    "model": "uaccounts.comment",
+    "pk": "17015cf9-df6e-45d6-ac2c-f000caad94ee",
+    "fields": {
+        "car": "da6344cc-a78e-45b3-a0fe-9b448e2abab0",
+        "user": [
+            "admin"
+        ],
+        "text": "asdasd",
+        "date_added": "2023-03-09T13:23:52.610Z"
+    }
+},
+{
+    "model": "uaccounts.comment",
+    "pk": "8376c969-ed5f-4eda-a5be-ecb221c99ffe",
+    "fields": {
+        "car": "da6344cc-a78e-45b3-a0fe-9b448e2abab0",
+        "user": [
+            "admin"
+        ],
+        "text": "Окончательно сколько стоит?",
+        "date_added": "2023-03-05T12:23:11.873Z"
+    }
+},
+{
+    "model": "uaccounts.comment",
+    "pk": "868c5d55-9185-478a-a90d-50ce9f6df0c2",
+    "fields": {
+        "car": "da6344cc-a78e-45b3-a0fe-9b448e2abab0",
+        "user": [
+            "user"
+        ],
+        "text": "asdasdasd",
+        "date_added": "2023-03-06T10:21:54.108Z"
+    }
+},
+{
+    "model": "uaccounts.comment",
+    "pk": "95d04368-c96e-437c-8c69-d6718a29a65c",
+    "fields": {
+        "car": "d9a14258-9204-4d73-ba97-fd3350f54873",
+        "user": [
+            "Albert"
+        ],
+        "text": "asdsadsa",
+        "date_added": "2023-03-06T10:55:51.080Z"
+    }
+},
+{
+    "model": "uaccounts.comment",
+    "pk": "ada348a8-8fe7-4c66-ab69-7231c155a67b",
+    "fields": {
+        "car": "d9a14258-9204-4d73-ba97-fd3350f54873",
+        "user": [
+            "admin"
+        ],
+        "text": "Kak dela?",
+        "date_added": "2023-03-06T10:36:09.151Z"
+    }
+},
+{
+    "model": "uaccounts.comment",
+    "pk": "e3a1845c-2ae6-41a5-aec1-758627acb338",
+    "fields": {
+        "car": "d9a14258-9204-4d73-ba97-fd3350f54873",
+        "user": [
+            "admin"
+        ],
+        "text": "sadasd",
+        "date_added": "2023-03-06T10:34:01.213Z"
+    }
+},
+{
+    "model": "contacts.contact",
+    "pk": "02963f0b-5154-421f-bf24-cad9b2f8c335",
+    "fields": {
+        "first_name": "Kaidu",
+        "last_name": "Carolyn",
+        "car_id": "3fa992de-9128-40e1-90cc-e664297ab6dc",
+        "car_title": "BMW I7",
+        "customer_need": "I'm interested in this",
+        "city": "Bishkek",
+        "state": "Chuy",
+        "phone": "+79643304400",
+        "email": "kaidu219@gmail.com",
+        "message": "asdasdasd",
+        "user_id": "0",
+        "created_date": "2023-03-07T13:51:46.844Z"
+    }
+},
+{
+    "model": "contacts.contact",
+    "pk": "144b5a82-ae41-4372-8cec-890a1c7c7bcb",
+    "fields": {
+        "first_name": "Askar",
+        "last_name": "Almaz uulu",
+        "car_id": "0dbfed0a-d091-4272-b9f0-404fa445df06",
+        "car_title": "Mercedes-Benz G-Class",
+        "customer_need": "I'm interested in this",
+        "city": "bis",
+        "state": "chiu",
+        "phone": "+7 964 330 44 00",
+        "email": "becoderkg@gmail.com",
+        "message": "asdasdas",
+        "user_id": "7",
+        "created_date": "2023-03-08T15:15:24.903Z"
+    }
+},
+{
+    "model": "contacts.contact",
+    "pk": "4252d0b2-6a1b-4ab6-b6be-abbe1d191f19",
+    "fields": {
+        "first_name": "Kaidu",
+        "last_name": "asdasd",
+        "car_id": "3fa992de-9128-40e1-90cc-e664297ab6dc",
+        "car_title": "BMW I7",
+        "customer_need": "I'm interested in this",
+        "city": "Bishkek",
+        "state": "Chuy",
+        "phone": "+79643304400",
+        "email": "kaidu219@gmail.com",
+        "message": "asdasdasd",
+        "user_id": "0",
+        "created_date": "2023-03-08T15:05:00.254Z"
+    }
+},
+{
+    "model": "contacts.contact",
+    "pk": "e6c1256e-344d-4a0f-af98-b56c3282055f",
+    "fields": {
+        "first_name": "Kaidu",
+        "last_name": "Carolyn",
+        "car_id": "3fa992de-9128-40e1-90cc-e664297ab6dc",
+        "car_title": "BMW I7",
+        "customer_need": "I'm interested in this",
+        "city": "Bishkek",
+        "state": "Chuy",
+        "phone": "+79643304400",
+        "email": "kaidu219@gmail.com",
+        "message": "sadasda",
+        "user_id": "0",
+        "created_date": "2023-03-08T15:04:44.326Z"
+    }
+},
+{
+    "model": "contacts.contact",
+    "pk": "ed1d2281-386b-4e27-b05c-e448ed409a33",
+    "fields": {
+        "first_name": "Kaidu",
+        "last_name": "Atambaev",
+        "car_id": "d9a14258-9204-4d73-ba97-fd3350f54873",
+        "car_title": "Toyota Land Cruiser 300 2019",
+        "customer_need": "I'm interested in this",
+        "city": "Bishkek",
+        "state": "Chuy",
+        "phone": "+79643304400",
+        "email": "almaz@mail.com",
+        "message": "hjkgkjg",
+        "user_id": "9",
+        "created_date": "2023-03-08T15:07:07.723Z"
+    }
+},
+{
+    "model": "contacts.contact",
+    "pk": "ef32005b-1d77-4cc0-8062-86aac9435f8e",
+    "fields": {
+        "first_name": "Kaidu",
+        "last_name": "asdasda",
+        "car_id": "3fa992de-9128-40e1-90cc-e664297ab6dc",
+        "car_title": "BMW I7",
+        "customer_need": "I'm interested in this",
+        "city": "Bishkek",
+        "state": "Chuy",
+        "phone": "+7 964 330 44 00",
+        "email": "carsellplatformdjango@gmail.com",
+        "message": "sadasda",
+        "user_id": "7",
+        "created_date": "2023-03-08T14:36:12.388Z"
+    }
+},
+{
+    "model": "captcha.captchastore",
+    "pk": 1,
+    "fields": {
+        "challenge": "UXUG",
+        "response": "uxug",
+        "hashkey": "dc64b34a0123d8a21e6fd26cd4c252d3bbe9af6c",
+        "expiration": "2023-03-08T12:42:12.076Z"
+    }
+},
+{
+    "model": "captcha.captchastore",
+    "pk": 2,
+    "fields": {
+        "challenge": "JYVW",
+        "response": "jyvw",
+        "hashkey": "dde7130de3b1cf5531e5856d9e530db45286b4c7",
+        "expiration": "2023-03-08T12:42:32.161Z"
+    }
+},
+{
+    "model": "captcha.captchastore",
+    "pk": 3,
+    "fields": {
+        "challenge": "WSAD",
+        "response": "wsad",
+        "hashkey": "a174ae20fcfc3e933e48bbd735ec57f43b1d6b67",
+        "expiration": "2023-03-08T14:39:55.866Z"
+    }
+},
+{
+    "model": "captcha.captchastore",
+    "pk": 4,
+    "fields": {
+        "challenge": "IRIT",
+        "response": "irit",
+        "hashkey": "ba8bc4c38bd386ce6b18e683a7fc8fc58754342a",
+        "expiration": "2023-03-08T14:40:32.159Z"
+    }
+},
+{
+    "model": "captcha.captchastore",
+    "pk": 5,
+    "fields": {
+        "challenge": "VKGT",
+        "response": "vkgt",
+        "hashkey": "e20dde98fdf7194fce4317a6b1c9e3fe24bdb426",
+        "expiration": "2023-03-08T15:04:22.715Z"
+    }
+},
+{
+    "model": "captcha.captchastore",
+    "pk": 6,
+    "fields": {
+        "challenge": "JKXB",
+        "response": "jkxb",
+        "hashkey": "6942f08eb286d427a1c49e9668b49c74c6d845e6",
+        "expiration": "2023-03-09T11:16:06.534Z"
+    }
+},
+{
+    "model": "captcha.captchastore",
+    "pk": 7,
+    "fields": {
+        "challenge": "UZRR",
+        "response": "uzrr",
+        "hashkey": "d9f49c4d5aa385a983aa03d28ab662fa6e86afa1",
+        "expiration": "2023-03-09T11:16:53.238Z"
+    }
+},
+{
+    "model": "captcha.captchastore",
+    "pk": 8,
+    "fields": {
+        "challenge": "10*9=",
+        "response": "90",
+        "hashkey": "ab1093d408613e3bbbe4fb2a91c6703b87a05b5a",
+        "expiration": "2023-03-09T11:26:31.284Z"
+    }
+},
+{
+    "model": "captcha.captchastore",
+    "pk": 9,
+    "fields": {
+        "challenge": "8-1=",
+        "response": "7",
+        "hashkey": "9f2152553adb22f4cac029f18f614ef9d41639f5",
+        "expiration": "2023-03-09T12:33:15.340Z"
+    }
+},
+{
+    "model": "socialaccount.socialapp",
+    "pk": 1,
+    "fields": {
+        "provider": "facebook",
+        "name": "Facebook login",
+        "client_id": "734241558051988",
+        "secret": "c6e835d19b99c9320595306335448025",
+        "key": "",
+        "sites": [
+            [
+                "localhost:8000"
+            ]
+        ]
+    }
+},
+{
+    "model": "socialaccount.socialapp",
+    "pk": 2,
+    "fields": {
+        "provider": "google",
+        "name": "Google login",
+        "client_id": "266841815382-fe1fpgnnmfvn3j7hj0nnruv81ls78408.apps.googleusercontent.com",
+        "secret": "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",
+        "key": "",
+        "sites": [
+            [
+                "localhost:8000"
+            ]
+        ]
+    }
+},
+{
+    "model": "socialaccount.socialaccount",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "user"
+        ],
+        "provider": "google",
+        "uid": "102616947399717130759",
+        "last_login": "2023-03-06T09:13:28.091Z",
+        "date_joined": "2023-03-06T09:13:28.091Z",
+        "extra_data": "{\"iss\": \"https://accounts.google.com\", \"azp\": \"266841815382-fe1fpgnnmfvn3j7hj0nnruv81ls78408.apps.googleusercontent.com\", \"aud\": \"266841815382-fe1fpgnnmfvn3j7hj0nnruv81ls78408.apps.googleusercontent.com\", \"sub\": \"102616947399717130759\", \"at_hash\": \"Ui3OzONoaevZSWS_qG1Uzw\", \"name\": \"\\u041a\\u0430\\u0439\\u0434\\u0443 \\u0411\\u0435\\u0440\\u0434\\u0438\\u043a\\u043e\\u0436\\u043e\\u0435\\u0432\", \"picture\": \"https://lh3.googleusercontent.com/a/AGNmyxaJwVNiVI6AFeQuTsdos6IZ_M8f011gwLpeGP0MUQ=s96-c\", \"given_name\": \"\\u041a\\u0430\\u0439\\u0434\\u0443\", \"family_name\": \"\\u0411\\u0435\\u0440\\u0434\\u0438\\u043a\\u043e\\u0436\\u043e\\u0435\\u0432\", \"locale\": \"ru\", \"iat\": 1678094008, \"exp\": 1678097608}"
+    }
+},
+{
+    "model": "socialaccount.socialaccount",
+    "pk": 4,
+    "fields": {
+        "user": [
+            "carsell"
+        ],
+        "provider": "google",
+        "uid": "103365218300075427732",
+        "last_login": "2023-03-06T09:15:01.946Z",
+        "date_joined": "2023-03-06T09:13:56.728Z",
+        "extra_data": "{\"iss\": \"https://accounts.google.com\", \"azp\": \"266841815382-fe1fpgnnmfvn3j7hj0nnruv81ls78408.apps.googleusercontent.com\", \"aud\": \"266841815382-fe1fpgnnmfvn3j7hj0nnruv81ls78408.apps.googleusercontent.com\", \"sub\": \"103365218300075427732\", \"at_hash\": \"kqmpZn0JRvGFUPwG3JnS2Q\", \"name\": \"Carsell Platform\", \"picture\": \"https://lh3.googleusercontent.com/a/AGNmyxYtxtgeCZTuwCnvudEMG5kHn35kN5xHB7PGEDjD=s96-c\", \"given_name\": \"Carsell\", \"family_name\": \"Platform\", \"locale\": \"ru\", \"iat\": 1678094102, \"exp\": 1678097702}"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2023-02-25T08:25:25.622Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "7",
+        "object_repr": "admin",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2023-02-28T12:30:59.513Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "cars",
+            "carphoto"
+        ],
+        "object_id": "ff785339-a8d7-4ba3-a057-2bf6ac6c84a2",
+        "object_repr": "Bugatti Veyron",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2023-02-28T12:31:02.714Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "cars",
+            "carphoto"
+        ],
+        "object_id": "fdcb6615-e5ed-4478-80b3-85ab735d224a",
+        "object_repr": "Bugatti Veyron",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2023-03-01T12:15:42.917Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "cars",
+            "car"
+        ],
+        "object_id": "5b59f013-46f1-40f6-bd68-cbf365ae76dd",
+        "object_repr": "Bugatti Veyron",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Owner\", \"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2023-03-01T12:37:24.827Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "cars",
+            "car"
+        ],
+        "object_id": "d9a14258-9204-4d73-ba97-fd3350f54873",
+        "object_repr": "Toyota Land Cruiser 300",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Owner\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2023-03-02T11:46:41.333Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "cars",
+            "car"
+        ],
+        "object_id": "da6344cc-a78e-45b3-a0fe-9b448e2abab0",
+        "object_repr": "Audi Q7",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Owner\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2023-03-04T11:47:26.609Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "7",
+        "object_repr": "admin",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Email address\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2023-03-05T12:23:11.876Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "uaccounts",
+            "comment"
+        ],
+        "object_id": "8376c969-ed5f-4eda-a5be-ecb221c99ffe",
+        "object_repr": "Askar Almaz uulu commented on Audi Q7",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2023-03-06T09:05:26.444Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "uaccounts",
+            "comment"
+        ],
+        "object_id": "c6bc1a7d-0397-4ff2-9ce4-9845f2b70341",
+        "object_repr": "Кайду Бердикожоев commented on Audi Q7",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2023-03-06T09:13:00.278Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "8",
+        "object_repr": "user",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2023-03-06T10:21:54.111Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "uaccounts",
+            "comment"
+        ],
+        "object_id": "868c5d55-9185-478a-a90d-50ce9f6df0c2",
+        "object_repr": "Кайду Бердикожоев commented on Audi Q7",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2023-03-08T15:06:20.224Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "7",
+        "object_repr": "admin",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Email address\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2023-03-08T15:11:12.681Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "13",
+        "object_repr": "kaidu",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2023-03-08T15:11:29.165Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "cars",
+            "car"
+        ],
+        "object_id": "3fa992de-9128-40e1-90cc-e664297ab6dc",
+        "object_repr": "BMW I7",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Owner\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2023-03-08T15:12:23.507Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "13",
+        "object_repr": "kaidu",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2023-03-08T15:15:03.346Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "cars",
+            "car"
+        ],
+        "object_id": "0dbfed0a-d091-4272-b9f0-404fa445df06",
+        "object_repr": "Mercedes-Benz G-Class",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Owner\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2023-03-09T11:20:58.970Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "7",
+        "object_repr": "admin",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Email address\"]}}]"
+    }
+}
+]

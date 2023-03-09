@@ -4,7 +4,7 @@
  * Licensed under the MIT license
  */
 
-.dropdown-submenu > a:after {
+.dropdown-submenu>a:after {
     content: "";
 }
 
@@ -45,7 +45,7 @@
         border-radius: 4px 4px 0;
     }
 
-    .dropdown-submenu > a:after {
+    .dropdown-submenu>a:after {
         float: right;
         margin-top: 6px;
         margin-right: -10px;
@@ -54,8 +54,8 @@
         border-bottom: 4px solid transparent;
     }
 
-    .dropdown-menu-right .dropdown-submenu > a:after,
-    .navbar-right .dropdown-submenu > a:after {
+    .dropdown-menu-right .dropdown-submenu>a:after,
+    .navbar-right .dropdown-submenu>a:after {
         float: left;
         border-left: none;
         margin-left: -10px;
@@ -74,7 +74,7 @@
         box-shadow: none;
     }
 
-    .dropdown-submenu > a:after {
+    .dropdown-submenu>a:after {
         margin-left: 6px;
         display: inline-block;
         vertical-align: middle;
@@ -83,59 +83,59 @@
         border-right: 4px solid transparent;
     }
 
-    .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li.dropdown-header,
-    .dropup > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li.dropdown-header,
-    .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li.dropdown-header,
-    .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > a,
-    .dropup > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > a,
-    .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > a {
+    .dropdown>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li.dropdown-header,
+    .dropup>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li.dropdown-header,
+    .btn-group>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li.dropdown-header,
+    .dropdown>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li>a,
+    .dropup>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li>a,
+    .btn-group>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li>a {
         padding-left: 30px;
     }
 
-    .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
-    .dropup > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
-    .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
-    .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > a,
-    .dropup > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > a,
-    .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > a {
+    .dropdown>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li>.dropdown-menu>li.dropdown-header,
+    .dropup>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li>.dropdown-menu>li.dropdown-header,
+    .btn-group>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li>.dropdown-menu>li.dropdown-header,
+    .dropdown>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li>.dropdown-menu>li>a,
+    .dropup>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li>.dropdown-menu>li>a,
+    .btn-group>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li>.dropdown-menu>li>a {
         padding-left: 40px;
     }
 
-    .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
-    .dropup > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
-    .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
-    .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a,
-    .dropup > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a,
-    .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a {
+    .dropdown>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li>.dropdown-menu>li>.dropdown-menu>li.dropdown-header,
+    .dropup>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li>.dropdown-menu>li>.dropdown-menu>li.dropdown-header,
+    .btn-group>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li>.dropdown-menu>li>.dropdown-menu>li.dropdown-header,
+    .dropdown>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li>.dropdown-menu>li>.dropdown-menu>li>a,
+    .dropup>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li>.dropdown-menu>li>.dropdown-menu>li>a,
+    .btn-group>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li>.dropdown-menu>li>.dropdown-menu>li>a {
         padding-left: 50px;
     }
 
-    .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
-    .dropup > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
-    .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
-    .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a,
-    .dropup > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a,
-    .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a {
+    .dropdown>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li>.dropdown-menu>li>.dropdown-menu>li>.dropdown-menu>li.dropdown-header,
+    .dropup>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li>.dropdown-menu>li>.dropdown-menu>li>.dropdown-menu>li.dropdown-header,
+    .btn-group>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li>.dropdown-menu>li>.dropdown-menu>li>.dropdown-menu>li.dropdown-header,
+    .dropdown>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li>.dropdown-menu>li>.dropdown-menu>li>.dropdown-menu>li>a,
+    .dropup>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li>.dropdown-menu>li>.dropdown-menu>li>.dropdown-menu>li>a,
+    .btn-group>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li>.dropdown-menu>li>.dropdown-menu>li>.dropdown-menu>li>a {
         padding-left: 60px;
     }
 
-    .navbar-nav > .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li.dropdown-header,
-    .navbar-nav > .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > a {
+    .navbar-nav>.dropdown>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li.dropdown-header,
+    .navbar-nav>.dropdown>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li>a {
         padding-left: 35px;
     }
 
-    .navbar-nav > .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
-    .navbar-nav > .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > a {
+    .navbar-nav>.dropdown>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li>.dropdown-menu>li.dropdown-header,
+    .navbar-nav>.dropdown>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li>.dropdown-menu>li>a {
         padding-left: 45px;
     }
 
-    .navbar-nav > .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
-    .navbar-nav > .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a {
+    .navbar-nav>.dropdown>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li>.dropdown-menu>li>.dropdown-menu>li.dropdown-header,
+    .navbar-nav>.dropdown>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li>.dropdown-menu>li>.dropdown-menu>li>a {
         padding-left: 55px;
     }
 
-    .navbar-nav > .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
-    .navbar-nav > .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a {
+    .navbar-nav>.dropdown>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li>.dropdown-menu>li>.dropdown-menu>li>.dropdown-menu>li.dropdown-header,
+    .navbar-nav>.dropdown>.dropdown-menu>.dropdown-submenu>.dropdown-menu>li>.dropdown-menu>li>.dropdown-menu>li>.dropdown-menu>li>a {
         padding-left: 65px;
     }
 }

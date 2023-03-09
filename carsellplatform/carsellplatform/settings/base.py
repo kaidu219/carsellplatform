@@ -63,9 +63,9 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    # 'django.middleware.cache.UpdateCacheMiddleware',
+    'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
-    # 'django.middleware.cache.FetchFromCacheMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -91,11 +91,11 @@ TEMPLATES = [
     },
 ]
 
-# CACHES = {
-#     'default':{
-#         'BACKEND':'django.core.cache.backends.locmem.LocMemCache',
-#     }
-# }
+CACHES = {
+    'default':{
+        'BACKEND':'django.core.cache.backends.locmem.LocMemCache',
+    }
+}
 
 WSGI_APPLICATION = 'carsellplatform.wsgi.application'
 
@@ -158,9 +158,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = "/media/"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-SITE_ID = 1
-
 LOGIN_REDIRECT_URL = 'dashboard'
+SITE_ID = 1
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -177,6 +176,7 @@ EMAIL_USE_TSL = config('EMAIL_USE_TSL', cast=bool)
 EMAIL_USE_SSL = config('EMAIL_USE_SSL', cast=bool)
 
 
+CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.math_challenge'
 
 
 CKEDITOR_CONFIGS = {

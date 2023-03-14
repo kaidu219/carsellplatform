@@ -276,6 +276,7 @@ class CarCreateView(LoginRequiredMixin, CreateView):
 
 class CarDeleteView(LoginRequiredMixin, CarOwnerOrAdminMixin, DeleteView):
     model = Car
+    login_url = 'login'
     success_url = reverse_lazy('user_cars')
     pk_url_kwarg = 'id'
 

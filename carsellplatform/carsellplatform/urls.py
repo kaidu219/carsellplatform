@@ -18,15 +18,17 @@ from django.urls import path, include
 from website import views
 from django.conf.urls.static import static
 from django.conf import settings
-
+from drfcars.views import CarsAPIView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/v1/carslist/', CarsAPIView.as_view()),
     path("", include("website.urls")),
     path('cars/', include('cars.urls')),
     path('accounts/', include('uaccounts.urls')),
     path('socialaccounts/', include('allauth.urls')),
     path('contacts/', include('contacts.urls')),
+    path('api-auth/', include('rest_framework.urls')),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 
 urlpatterns += [

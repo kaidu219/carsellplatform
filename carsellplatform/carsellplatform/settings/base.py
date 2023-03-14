@@ -45,11 +45,16 @@ INSTALLED_APPS = [
     'ckeditor',
     'django.contrib.humanize',
     'active_link',
+    'rest_framework',
+    'captcha',
+
+    # apps of the project
     'website.apps.WebsiteConfig',
     'cars.apps.CarsConfig',
     'uaccounts.apps.UaccountsConfig',
     'contacts.apps.ContactsConfig',
-    'captcha',
+    'drfcars.apps.DrfcarsConfig',
+    
 
     #allaccounts
     'allauth',
@@ -131,6 +136,14 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
 
 
 # Internationalization

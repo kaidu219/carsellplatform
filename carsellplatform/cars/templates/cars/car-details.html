@@ -43,7 +43,9 @@
                         <div class="carousel-inner">
 
                             <div class="active item carousel-item" data-slide-number="0">
+                                {% if car.car_main_photo %}
                                 <img src="{{ car.car_main_photo.url }}" class="img-fluid" alt="slider-car">
+                                {% endif %}
                             </div>
 
                             {% for pic in car.carphoto_set.all %}
@@ -59,7 +61,9 @@
                                 
                                 <li class="list-inline-item active">
                                     <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#carDetailsSlider">
+                                        {% if car.car_main_photo %}
                                         <img src="{{ car.car_main_photo.url }}" class="img-fluid" alt="small-car">
+                                        {% endif %}
                                     </a>
                                 </li>
 

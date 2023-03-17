@@ -127,7 +127,7 @@ class UsercarsView(LoginRequiredMixin, TemplateView):
     
 class AddCommentView(LoginRequiredMixin, TemplateView):
     def post(self, request, pk, *args, **kwargs):
-        car = Car.objects.get(id=pk)
+        car = Car.objects.get(pk=pk)
         form = CommentForm(request.POST)
         if form.is_valid():
             if request.user.is_authenticated:

@@ -196,7 +196,9 @@
                     <div class="car-thumbnail">
                         <a href="{% url 'cardetails' car.id %}" class="car-img">
                             <div class="tag">For Sale</div>
+                            {% if car.car_main_photo %}
                             <img class="d-block w-100" src="{{car.car_main_photo.url}}" alt="car">
+                            {% endif %}
                             <div class="facilities-list clearfix">
                                 <ul>
                                     <li>

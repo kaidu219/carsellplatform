@@ -7,7 +7,7 @@ class Team(models.Model):
     first_name = models.CharField(max_length=250, null=False, verbose_name = 'Имя')
     last_name = models.CharField(max_length=250, null=False, verbose_name = 'Фамилия')
     designation = models.CharField(max_length=250, null=False, verbose_name = 'Должность')
-    photo = models.ImageField(upload_to='photo/%Y/%m/%d', null=True)
+    photo = models.ImageField(upload_to='photo/%Y/%m/%d', null=True, default="photo/withoutavatar.jpg")
     fb_link = models.URLField(max_length=200, blank=True, verbose_name = 'Ссылка на facebook')
     tw_link = models.URLField(max_length=200, blank=True, verbose_name = 'Ссылка на twitter')
     wa_link = models.URLField(max_length=200, blank=True, verbose_name = 'Ссылка на whatsapp')

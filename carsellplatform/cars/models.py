@@ -57,7 +57,7 @@ class Car(models.Model):
     condition = models.CharField(max_length=255)
     price = models.IntegerField()
     description = RichTextField()
-    car_main_photo = models.ImageField(upload_to='photos/cars/%Y/%m/%d/', null=True, blank=True)
+    car_main_photo = models.ImageField(upload_to='photos/cars/%Y/%m/%d/', null=True, blank=True, default='photos/cars/ghost.png')
     features = MultiSelectField(choices=featured_options, max_length=255)
     body_style = models.CharField(max_length=255)
     engine = models.CharField(max_length=255)
@@ -72,6 +72,7 @@ class Car(models.Model):
     fuel_mileage = models.CharField(max_length=255)
     is_featured = models.BooleanField(default=False)
     created_date = models.DateTimeField(auto_now_add=True)
+    update_date = models.DateTimeField(auto_now=True, null=True)
     
     
     def __str__(self) -> str:

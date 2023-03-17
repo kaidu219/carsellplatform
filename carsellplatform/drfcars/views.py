@@ -12,6 +12,8 @@ from website.models import Team
 from uaccounts.models import Comment
 from .serializers import *
 
+
+# methods for Cars
 class CarsAPIView(APIView):
     permission_classes = [IsAuthenticated]
 
@@ -20,17 +22,16 @@ class CarsAPIView(APIView):
         serializer = CarSerializer(cars, many=True)
         return Response(serializer.data)
     
-
 class CarsCreateView(APIView):
     permission_classes = [IsAuthenticated]
 
     def post(self, request):
-        car = CarCreateSerializer(data=request.data)
+        serializer = CarCreateSerializer(data=request.data)
 
-        if car.is_valid():
-            car.save()
-            return Response(car.data)
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
         # lst = Car.objects.all().values()
         # return Response({'cars': list(lst)})
@@ -46,7 +47,26 @@ class CarDetailView(APIView):
         serializer = CarDetailViewSerializer(car)
         return Response(serializer.data)
 
+class CarUpdateAPIView(APIView):
+    permission_classes = [IsAuthenticated]
 
+    def put(self, request, pk):
+        car = Car.objects.get(pk=pk)
+        serializer = CarCreateSerializer(car, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class CarDeleteAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def delete(self, request, pk):
+        car = Car.objects.get(pk=pk)
+        car.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+# methods for team
 class TeamAPIView(APIView):
     permission_classes = [IsAuthenticated]
 
@@ -76,9 +96,6 @@ class TeamAPIView(APIView):
         serializer.save()
         return Response(serializer.data)
 
-
-
-
 class TeamDatailView(APIView):
     permission_classes = [IsAuthenticated]
     
@@ -86,8 +103,51 @@ class TeamDatailView(APIView):
         worker = Team.objects.get(id=pk)
         serializer = TeamDetailViewSerializer(worker)
         return Response(serializer.data)
+    
+class TeamDeleteAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+    def delete(self, request, pk):
+        worker = Team.objects.filter(pk=pk)
+        worker.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
+# methods for comment
+class CommentAPIView(APIView):
+    permission_classes = [IsAuthenticated]
 
+    def get(self, request):
+        comments = Comment.objects.all()
+        serializer = CommentSerializer(comments, many=True)
+        return Response(serializer.data)
+    
+    def put(self, request, *args, **kwargs):
+        pk = kwargs.get('pk', None)
+        if not pk:
+            return Response({"error": "Method PUT not allowed!"})
+        try:
+            isinstance = Comment.objects.get(pk=pk)
+        except:
+            return Response({"error": "Object does not exist!"})
+
+        serializer = CommentSerializer(data=request.data, instance=isinstance)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data)
+
+class CommentDetailView(APIView):
+    permission_classes = [IsAuthenticated]
+    
+    def get(self, request, pk):
+        comment = Comment.objects.get(pk=pk)
+        serializer = CommentDetailViewSerializer(comment)
+        return Response(serializer.data)
+    
+class CommentDeleteAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+    def delete(self, request, pk):
+        comment = Comment.objects.filter(pk=pk)
+        comment.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 # class TeamAPIView(APIView):
 #     permission_classes = [IsAuthenticated]
 
@@ -115,10 +175,3 @@ class TeamDatailView(APIView):
 #         serializer = CommentSerializer(comment)
 
 #         return Response(serializer.data)
-
-
-class TeamDeleteAPIView(APIView):
-    def delete(self, request, pk):
-        worker = Team.objects.filter(pk=pk)
-        worker.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)

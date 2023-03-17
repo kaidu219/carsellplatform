@@ -15,7 +15,11 @@
                     <div class="team-1">
                         <div class="photo">
                             <a href="#">
+                                {% if team.photo %}
                                 <img src="{{ team.photo.url }}" alt="team-1" class="img-fluid">
+                                {% else %}
+                                <img src="{% static '/img/avatar/withoutavatar.jpg' %}" alt="team-1" class="img-fluid">
+                                {% endif %}
                             </a>
                             <div class="social-list clearfix">
                                 <a href="{{ team.fb_link }}" class="facebook-bg"><i class="fa fa-facebook"></i></a>

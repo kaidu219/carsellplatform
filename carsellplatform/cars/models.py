@@ -84,7 +84,7 @@ class Car(models.Model):
 class CarPhoto(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, unique=True, editable=False)
     car_photo = models.ForeignKey(Car, on_delete=models.CASCADE, null=True, blank=True)
-    image = models.FileField(upload_to = 'photos/cars/car_photos/%Y/%m/%d/')
+    image = models.FileField(upload_to = 'photos/cars/car_photos/%Y/%m/%d/', null=True, blank=False)
    
     def __str__(self) -> str:
         return self.car_photo.car_title
